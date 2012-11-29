@@ -1,3 +1,4 @@
+require 'frank-cucumber'
 require 'furter/navigation'
 require 'furter/accessors'
 require 'furter/accessors/view'
