@@ -1,4 +1,6 @@
+require 'furter/navigation'
 require 'furter/accessors'
+require 'furter/accessors/view'
 require 'furter/accessors/alert_button'
 require 'furter/accessors/button'
 require 'furter/accessors/erie_button'
@@ -6,8 +8,6 @@ require 'furter/accessors/map_pin'
 require 'furter/accessors/switch'
 require 'furter/accessors/table_item'
 require 'furter/accessors/text'
-require 'furter/accessors/view'
-require 'furter/navigation'
 
 module Furter
   include Frank::Cucumber::FrankHelper
