@@ -1,8 +1,3 @@
-require 'accessors/view'
-require 'accessors/button'
-require 'accessors/erie_button'
-require 'accessors/text'
-
 module Furter
   module Accessors
     def text(name, locator)

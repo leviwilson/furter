@@ -1,4 +1,8 @@
 require 'furter/accessors'
+require 'furter/accessors/view'
+require 'furter/accessors/button'
+require 'furter/accessors/erie_button'
+require 'furter/accessors/text'
 require 'furter/navigation'
 
 module Furter
