@@ -35,7 +35,7 @@ module Furter
 
   def wait_for(locator, &block)
     wait_until(:message => "Timed out waiting for \"#{locator}\"", :timeout => Furter::TIMEOUT) do
-      exists = element_exists locator
+      exists? locator
     end
     block.call locator if block
   end

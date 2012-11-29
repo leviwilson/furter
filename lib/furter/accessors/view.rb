@@ -1,7 +1,7 @@
 module Furter
   module Accessors
     class View
-      include Furter
+      include Furter, Frank::Cucumber::FrankHelper, Frank::Cucumber::WaitHelper
 
       def initialize(locator)
         @locator = locator
