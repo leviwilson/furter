@@ -1,4 +1,5 @@
-require_relative 'navigation'
+require 'furter/accessors'
+require 'furter/navigation'
 
 module Furter
   include Frank::Cucumber::FrankHelper

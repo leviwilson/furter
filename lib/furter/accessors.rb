@@ -1,7 +1,7 @@
-require_relative 'accessors/view'
-require_relative 'accessors/button'
-require_relative 'accessors/erie_button'
-require_relative 'accessors/text'
+require 'accessors/view'
+require 'accessors/button'
+require 'accessors/erie_button'
+require 'accessors/text'
 
 module Furter
   module Accessors
