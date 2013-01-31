@@ -6,15 +6,11 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'furter'
+    gem 'furter', :git => 'https://github.com/leviwilson/furter.git'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install furter
 
 ## Usage
 
