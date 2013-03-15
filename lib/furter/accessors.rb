@@ -10,6 +10,9 @@ module Furter
       define_method("#{name}=") do |text|
         Furter::Accessors::Text.new(locator).set_text text
       end
+      define_method("#{name}_view") do
+        Furter::Accessors::Text.new(locator)
+      end
     end
 
     def view(name, locator)
