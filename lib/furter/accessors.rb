@@ -42,6 +42,18 @@ module Furter
       end
     end
 
+    def table(name, locator)
+      define_method("#{name}=") do |which|
+        Furter::Accessors::TableItem.new(:text => which).click
+      end
+      define_method("#{name}_options") do
+        Furter::Accessors::Table.new(locator).options
+      end
+      define_method("#{name}_view") do
+        Furter::Accessors::Table.new(locator)
+      end
+    end
+
     def table_item(name, locator)
       define_method("#{name}") do
         Furter::Accessors::TableItem.new(locator).click
