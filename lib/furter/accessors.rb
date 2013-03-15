@@ -28,6 +28,9 @@ module Furter
       define_method("#{name}") do
         Furter::Accessors::Button.new(locator).click
       end
+      define_method("#{name}_view") do
+        Furter::Accessors::Button.new(locator)
+      end
     end
 
     def alert_button(name, locator)
