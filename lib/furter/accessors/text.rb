@@ -28,7 +28,7 @@ module Furter
       private
       def selector
         return "textField placeholder:'#{@locator[:placeholder]}'" if placeholder?
-        return "view marked:'#{@locator[:label]}'" if label?
+        return "textField marked:'#{@locator[:label]}'" if label?
       end
 
       def placeholder?
