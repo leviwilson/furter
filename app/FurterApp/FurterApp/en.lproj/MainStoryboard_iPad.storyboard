@@ -38,19 +38,45 @@
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZDx-36-Vlf"/>
                                     <constraint firstAttribute="width" constant="201" id="v52-Lv-Kpf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNa-e4-2od">
+                                <accessibility key="accessibilityConfiguration" hint="" label="textByLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79f-eU-bDt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbu-fr-Znd">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mEd-bW-xG3" firstAttribute="top" secondItem="26" secondAttribute="top" constant="20" symbolic="YES" type="default" id="1fx-hf-O8A"/>
+                            <constraint firstItem="HNa-e4-2od" firstAttribute="leading" secondItem="mEd-bW-xG3" secondAttribute="leading" type="default" id="078-hV-XP8"/>
+                            <constraint firstItem="79f-eU-bDt" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1JC-Aj-NzB"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CON-Cb-dBe"/>
+                            <constraint firstItem="HNa-e4-2od" firstAttribute="top" secondItem="mEd-bW-xG3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IGG-em-f1e"/>
+                            <constraint firstItem="mEd-bW-xG3" firstAttribute="top" secondItem="26" secondAttribute="top" constant="19" id="KGI-gf-TAe"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LAk-gc-aCl"/>
+                            <constraint firstItem="nbu-fr-Znd" firstAttribute="baseline" secondItem="HNa-e4-2od" secondAttribute="baseline" type="default" id="M5i-yy-h0N"/>
+                            <constraint firstItem="nbu-fr-Znd" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RZE-cI-a2V"/>
+                            <constraint firstItem="79f-eU-bDt" firstAttribute="top" secondItem="26" secondAttribute="top" constant="23" id="WAb-82-oiE"/>
+                            <constraint firstItem="HNa-e4-2od" firstAttribute="trailing" secondItem="mEd-bW-xG3" secondAttribute="trailing" type="default" id="e4T-wS-zIa"/>
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
-                            <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="93" id="jzd-lQ-hgK"/>
+                            <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
+                            <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
