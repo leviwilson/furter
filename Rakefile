@@ -16,4 +16,10 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
 
-task :test => [:spec, :features]
+task :test => [:build_app, :spec, :features]
+
+task :build_app do
+  Dir.chdir('app/FurterApp') do |working_directory|
+    `frank build`
+  end
+end
