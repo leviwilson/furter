@@ -12,8 +12,8 @@ module Furter
       end
 
       private
-      def selector
-        "view:'UISwitch' marked:'#{@locator[:label]}'"
+      def view_class
+        "view:'UISwitch'"
       end
     end
   end
