@@ -1,6 +1,8 @@
 module Furter
   module Accessors
     class Text < View
+      alias_method :editable?, :enabled?
+
       def get_text
         frankly_map(selector, "text")[0]
       end
@@ -13,10 +15,6 @@ module Furter
 
       def has_text?(text)
         element_exists "view marked:'#{text}'"
-      end
-
-      def editable?
-        frankly_map(selector, "isEnabled")[0]
       end
 
       private
