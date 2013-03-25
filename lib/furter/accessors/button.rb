@@ -3,13 +3,15 @@ module Furter
     class Button < View
       include Furter
 
-      private
-      def selector
-        "#{button_class} marked:'#{@locator[:text]}'"
+      def initialize(locator)
+        locator = locator.merge({:label => locator[:text]}) if locator[:text]
+        super(locator)
       end
 
-      def button_class
-        @locator[:type] || "button"
+      private
+      def view_class
+        return "view:'#{@locator[:type]}'" if @locator[:type]
+        'button'
       end
     end
   end

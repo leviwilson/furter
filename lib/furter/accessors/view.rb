@@ -16,7 +16,7 @@ module Furter
       end
 
       def enabled?
-        frankly_map(selector, "isEnabled")[0]
+        frankly_map(selector, 'isEnabled')[0]
       end
 
       private
@@ -30,7 +30,7 @@ module Furter
 
       def view_class
         return "view:'#{@locator[:type]}'" if @locator[:type]
-        return "view"
+        "view"
       end
     end
   end
