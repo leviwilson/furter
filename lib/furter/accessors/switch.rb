@@ -13,7 +13,7 @@ module Furter
 
       private
       def selector
-        "view:'RCSwitchOnOff' marked:'#{@locator[:label]}'"
+        "view:'UISwitch' marked:'#{@locator[:label]}'"
       end
     end
   end
