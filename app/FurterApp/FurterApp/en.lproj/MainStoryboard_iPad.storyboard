@@ -64,6 +64,22 @@
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyi-ck-8hR">
                                 <accessibility key="accessibilityConfiguration" label="switchToggle"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgB-Y1-P3J">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="1Nz-03-QXb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Some Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="someButtonClick:" destination="4" eventType="touchDown" id="LKw-by-anH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -76,9 +92,11 @@
                             <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LAk-gc-aCl"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="baseline" secondItem="HNa-e4-2od" secondAttribute="baseline" type="default" id="M5i-yy-h0N"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RZE-cI-a2V"/>
+                            <constraint firstItem="MgB-Y1-P3J" firstAttribute="leading" secondItem="HNa-e4-2od" secondAttribute="leading" type="default" id="TI6-aB-T6l"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="top" secondItem="26" secondAttribute="top" constant="23" id="WAb-82-oiE"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="trailing" secondItem="mEd-bW-xG3" secondAttribute="trailing" type="default" id="e4T-wS-zIa"/>
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
+                            <constraint firstItem="MgB-Y1-P3J" firstAttribute="top" secondItem="26" secondAttribute="top" constant="120" id="fxO-Da-wfr"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
                             <constraint firstItem="Nyi-ck-8hR" firstAttribute="top" secondItem="nbu-fr-Znd" secondAttribute="top" type="default" id="wtS-Ul-nbp"/>
@@ -89,6 +107,8 @@
                     <navigationItem key="navigationItem" title="Detail" id="53"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="27" id="29"/>
+                        <outlet property="labelTextField" destination="HNa-e4-2od" id="SHv-1W-wQm"/>
+                        <outlet property="placeholderTextField" destination="mEd-bW-xG3" id="WJN-WF-CeJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
@@ -169,20 +189,6 @@
             <point key="canvasLocation" x="-366" y="248"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

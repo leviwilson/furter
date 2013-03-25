@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+- (IBAction)someButtonClick:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *placeholderTextField;
+@property (weak, nonatomic) IBOutlet UITextField *labelTextField;
 
 @property (strong, nonatomic) id detailItem;
 

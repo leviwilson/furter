@@ -69,4 +69,7 @@
     self.masterPopoverController = nil;
 }
 
+- (IBAction)someButtonClick:(id)sender {
+    [self.labelTextField setText:@"The button was clicked!"];
+}
 @end
