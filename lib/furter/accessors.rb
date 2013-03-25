@@ -39,12 +39,6 @@ module Furter
       end
     end
 
-    def erie_button(name, locator)
-      define_method("#{name}") do
-        Furter::Accessors::ErieButton.new(locator).click
-      end
-    end
-
     def table(name, locator)
       define_method("#{name}=") do |which|
         Furter::Accessors::TableItem.new(:text => which).click
