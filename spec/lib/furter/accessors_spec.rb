@@ -5,6 +5,7 @@ class SomePage
 
   text(:text_field, :placeholder => 'text')
   view(:generic_view, :label => 'id')
+  button(:button_field, :label => 'id')
 end
 
 describe Furter::Accessors do
@@ -51,6 +52,23 @@ describe Furter::Accessors do
 
     it 'can return the raw view' do
       screen.generic_view_view.should be(view)
+    end
+  end
+
+  context 'button' do
+    let(:button) { double('Button accessor') }
+
+    before(:each) do
+      Furter::Accessors::Button.should_receive(:new).with(:label => 'id').and_return(button)
+    end
+
+    it 'can be clicked' do
+      button.should_receive(:click)
+      screen.button_field
+    end
+
+    it 'can return the raw view' do
+      screen.button_field_view.should be(button)
     end
   end
 end
