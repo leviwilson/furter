@@ -93,11 +93,25 @@
                                     <action selector="onLabeledButtonClicked:" destination="4" eventType="touchDown" id="SRl-Pb-TKU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-Kb-ePv">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Go Elsewhere">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2m6-NE-oGx" kind="push" id="g3T-p0-Sec"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="leading" secondItem="mEd-bW-xG3" secondAttribute="leading" type="default" id="078-hV-XP8"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1JC-Aj-NzB"/>
+                            <constraint firstItem="n4M-Kb-ePv" firstAttribute="top" secondItem="6Hu-uu-EUY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9II-fH-f7K"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CON-Cb-dBe"/>
                             <constraint firstAttribute="trailing" secondItem="Nyi-ck-8hR" secondAttribute="trailing" constant="227" id="G0P-fu-R9M"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="leading" secondItem="MgB-Y1-P3J" secondAttribute="leading" type="default" id="GwV-n1-zD7"/>
@@ -105,15 +119,17 @@
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="top" secondItem="26" secondAttribute="top" constant="19" id="KGI-gf-TAe"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LAk-gc-aCl"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="baseline" secondItem="HNa-e4-2od" secondAttribute="baseline" type="default" id="M5i-yy-h0N"/>
+                            <constraint firstItem="6Hu-uu-EUY" firstAttribute="top" secondItem="MgB-Y1-P3J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MWf-xM-HxM"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RZE-cI-a2V"/>
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="leading" secondItem="HNa-e4-2od" secondAttribute="leading" type="default" id="TI6-aB-T6l"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="trailing" secondItem="MgB-Y1-P3J" secondAttribute="trailing" type="default" id="Tkv-gE-Bb0"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="top" secondItem="26" secondAttribute="top" constant="23" id="WAb-82-oiE"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="trailing" secondItem="mEd-bW-xG3" secondAttribute="trailing" type="default" id="e4T-wS-zIa"/>
-                            <constraint firstItem="6Hu-uu-EUY" firstAttribute="top" secondItem="26" secondAttribute="top" constant="181" id="f8i-hG-If9"/>
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="top" secondItem="26" secondAttribute="top" constant="120" id="fxO-Da-wfr"/>
+                            <constraint firstItem="n4M-Kb-ePv" firstAttribute="leading" secondItem="6Hu-uu-EUY" secondAttribute="leading" type="default" id="gQf-GL-AtC"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
+                            <constraint firstItem="n4M-Kb-ePv" firstAttribute="trailing" secondItem="6Hu-uu-EUY" secondAttribute="trailing" type="default" id="kXJ-R6-5W3"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
                             <constraint firstItem="Nyi-ck-8hR" firstAttribute="top" secondItem="nbu-fr-Znd" secondAttribute="top" type="default" id="wtS-Ul-nbp"/>
                         </constraints>
@@ -131,7 +147,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="248"/>
+            <point key="canvasLocation" x="436" y="248"/>
+        </scene>
+        <!--View Controller - Elsewhere-->
+        <scene sceneID="c75-js-XhF">
+            <objects>
+                <viewController title="Elsewhere" id="2m6-NE-oGx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6v-eP-0Ap">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You are now elsewhere." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sw-kC-LPj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Sw-kC-LPj" firstAttribute="top" secondItem="L6v-eP-0Ap" secondAttribute="top" constant="341" id="fPL-qj-geg"/>
+                            <constraint firstItem="2Sw-kC-LPj" firstAttribute="centerX" secondItem="L6v-eP-0Ap" secondAttribute="centerX" type="default" id="iV6-oV-7kk"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Elsewhere" id="Y1Z-Bv-f1J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Noc-VA-Z4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="248"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="18">
@@ -207,6 +250,26 @@
             <point key="canvasLocation" x="-366" y="248"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onLabeledButtonClicked:"/>
+                <relationship kind="action" name="someButtonClick:"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="labeledButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="placeholderTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
