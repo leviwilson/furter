@@ -70,6 +70,9 @@ module Furter
       define_method("#{name}=") do |on_or_off|
         Furter::Accessors::Switch.new(locator).set on_or_off
       end
+      define_method("#{name}_view") do
+        Furter::Accessors::Switch.new(locator)
+      end
     end
   end
 end

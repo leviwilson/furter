@@ -89,5 +89,9 @@ describe Furter::Accessors do
       switch.should_receive(:set).with(false)
       screen.switch_field = false
     end
+
+    it 'can return the raw view' do
+      screen.switch_field_view.should be(switch)
+    end
   end
 end
