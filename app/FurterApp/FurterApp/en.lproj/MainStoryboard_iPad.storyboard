@@ -80,6 +80,19 @@
                                     <action selector="someButtonClick:" destination="4" eventType="touchDown" id="LKw-by-anH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hu-uu-EUY">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Labeled Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLabeledButtonClicked:" destination="4" eventType="touchDown" id="SRl-Pb-TKU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,14 +100,17 @@
                             <constraint firstItem="79f-eU-bDt" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1JC-Aj-NzB"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CON-Cb-dBe"/>
                             <constraint firstAttribute="trailing" secondItem="Nyi-ck-8hR" secondAttribute="trailing" constant="227" id="G0P-fu-R9M"/>
+                            <constraint firstItem="6Hu-uu-EUY" firstAttribute="leading" secondItem="MgB-Y1-P3J" secondAttribute="leading" type="default" id="GwV-n1-zD7"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="top" secondItem="mEd-bW-xG3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IGG-em-f1e"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="top" secondItem="26" secondAttribute="top" constant="19" id="KGI-gf-TAe"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LAk-gc-aCl"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="baseline" secondItem="HNa-e4-2od" secondAttribute="baseline" type="default" id="M5i-yy-h0N"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RZE-cI-a2V"/>
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="leading" secondItem="HNa-e4-2od" secondAttribute="leading" type="default" id="TI6-aB-T6l"/>
+                            <constraint firstItem="6Hu-uu-EUY" firstAttribute="trailing" secondItem="MgB-Y1-P3J" secondAttribute="trailing" type="default" id="Tkv-gE-Bb0"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="top" secondItem="26" secondAttribute="top" constant="23" id="WAb-82-oiE"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="trailing" secondItem="mEd-bW-xG3" secondAttribute="trailing" type="default" id="e4T-wS-zIa"/>
+                            <constraint firstItem="6Hu-uu-EUY" firstAttribute="top" secondItem="26" secondAttribute="top" constant="181" id="f8i-hG-If9"/>
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="top" secondItem="26" secondAttribute="top" constant="120" id="fxO-Da-wfr"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
@@ -108,7 +124,9 @@
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="27" id="29"/>
                         <outlet property="labelTextField" destination="HNa-e4-2od" id="SHv-1W-wQm"/>
+                        <outlet property="labeledButton" destination="6Hu-uu-EUY" id="lP4-Wp-TLL"/>
                         <outlet property="placeholderTextField" destination="mEd-bW-xG3" id="WJN-WF-CeJ"/>
+                        <outlet property="textButton" destination="MgB-Y1-P3J" id="dgB-Uo-P2L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>

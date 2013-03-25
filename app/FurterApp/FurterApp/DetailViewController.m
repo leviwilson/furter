@@ -45,6 +45,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    [self.labeledButton setAccessibilityLabel:@"labeledButtonId"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,5 +72,8 @@
 
 - (IBAction)someButtonClick:(id)sender {
     [self.labelTextField setText:@"The button was clicked!"];
+}
+- (IBAction)onLabeledButtonClicked:(id)sender {
+    [self.labelTextField setText:@"The labeled button was clicked!"];
 }
 @end

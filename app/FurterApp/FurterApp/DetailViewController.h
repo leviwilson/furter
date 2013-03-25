@@ -12,8 +12,11 @@
 - (IBAction)someButtonClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *placeholderTextField;
 @property (weak, nonatomic) IBOutlet UITextField *labelTextField;
+@property (weak, nonatomic) IBOutlet UIButton *textButton;
+@property (weak, nonatomic) IBOutlet UIButton *labeledButton;
 
 @property (strong, nonatomic) id detailItem;
 
+- (IBAction)onLabeledButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
