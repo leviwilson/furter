@@ -4,12 +4,13 @@ class SomePage
   include Furter
 
   text(:text_field, :placeholder => 'text')
+  view(:generic_view, :label => 'id')
 end
 
 describe Furter::Accessors do
   let(:screen) { SomePage.new }
 
-  context('text') do
+  context 'text' do
     let(:text) { double('Text accessor') }
 
     before(:each) do
@@ -33,6 +34,23 @@ describe Furter::Accessors do
 
     it 'can dish out a view' do
       screen.text_field_view.should be(text)
+    end
+  end
+
+  context 'view' do
+    let(:view) { double('View accessor') }
+
+    before(:each) do
+      Furter::Accessors::View.should_receive(:new).with(:label => 'id').and_return(view)
+    end
+
+    it 'can be clicked' do
+      view.should_receive(:click)
+      screen.generic_view
+    end
+
+    it 'can return the raw view' do
+      screen.generic_view_view.should be(view)
     end
   end
 end
