@@ -7,3 +7,6 @@ Scenario: Getting and setting text by placeholder
 Scenario: Getting and setting text by label
   When I set the text identified by "label" to "the label text"
   Then the text identified by "label" should be "the label text"
+
+Scenario: Determining if a text field is editable
+  Then we know if a text field is both editable and not editable
