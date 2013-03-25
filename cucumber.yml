@@ -1,1 +1,2 @@
 default: --no-source --color --format pretty
+wip: --no-source --color --format pretty --tag @wip
