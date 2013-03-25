@@ -3,7 +3,7 @@ module Furter
     class View
       include Furter, Frank::Cucumber::FrankHelper, Frank::Cucumber::WaitHelper
 
-      def initialize(locator)
+      def initialize(locator={})
         @locator = locator
       end
 
