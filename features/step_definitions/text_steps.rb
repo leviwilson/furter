@@ -18,3 +18,8 @@ Then(/^we know if a text field is both editable and not editable$/) do
   end
 end
 
+Then(/^we can interact with the raw text view identified by "(.*?)"$/) do |how|
+  text_view = on(DetailPage).send("text_#{how}_view")
+  text_view.should be_kind_of(Furter::Accessors::View)
+end
+

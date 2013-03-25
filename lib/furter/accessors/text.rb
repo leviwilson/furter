@@ -1,12 +1,6 @@
 module Furter
   module Accessors
-    class Text
-      include Frank::Cucumber::FrankHelper
-
-      def initialize(locator = {})
-        @locator = locator
-      end
-
+    class Text < View
       def get_text
         frankly_map(selector, "text")[0]
       end

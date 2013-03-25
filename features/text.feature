@@ -10,3 +10,6 @@ Scenario: Getting and setting text by label
 
 Scenario: Determining if a text field is editable
   Then we know if a text field is both editable and not editable
+
+Scenario: Working with the raw view
+  Then we can interact with the raw text view identified by "placeholder"
