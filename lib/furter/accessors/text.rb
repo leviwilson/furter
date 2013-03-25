@@ -21,16 +21,8 @@ module Furter
 
       private
       def selector
-        return "textField placeholder:'#{@locator[:placeholder]}'" if placeholder?
-        return "textField marked:'#{@locator[:label]}'" if label?
-      end
-
-      def placeholder?
-        @locator[:placeholder]
-      end
-
-      def label?
-        @locator[:label]
+        return "textField placeholder:'#{@locator[:placeholder]}'" if @locator[:placeholder]
+        return "textField marked:'#{@locator[:label]}'" if @locator[:label]
       end
     end
   end
