@@ -6,3 +6,7 @@ Then(/^switches can be toggled both on or off$/) do
     end
   end
 end
+
+Then /^we have access to the switch view$/ do
+  on(DetailPage).switch_toggle_view.should be_kind_of(Furter::Accessors::View)
+end
