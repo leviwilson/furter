@@ -6,6 +6,7 @@ class SomePage
   text(:text_field, :placeholder => 'text')
   view(:generic_view, :label => 'id')
   button(:button_field, :label => 'id')
+  switch(:switch_field, :label => 'id')
 end
 
 describe Furter::Accessors do
@@ -69,6 +70,24 @@ describe Furter::Accessors do
 
     it 'can return the raw view' do
       screen.button_field_view.should be(button)
+    end
+  end
+
+  context 'switch' do
+    let(:switch) { double('Switch accessor') }
+
+    before(:each) do
+      Furter::Accessors::Switch.should_receive(:new).with(:label => 'id').and_return(switch)
+    end
+
+    it 'is aware of its state' do
+      switch.should_receive(:on?).and_return(true)
+      screen.switch_field.should be_true
+    end
+
+    it 'can be turned on or off' do
+      switch.should_receive(:set).with(false)
+      screen.switch_field = false
     end
   end
 end
