@@ -61,12 +61,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyi-ck-8hR">
+                                <accessibility key="accessibilityConfiguration" label="switchToggle"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="leading" secondItem="mEd-bW-xG3" secondAttribute="leading" type="default" id="078-hV-XP8"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1JC-Aj-NzB"/>
                             <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CON-Cb-dBe"/>
+                            <constraint firstAttribute="trailing" secondItem="Nyi-ck-8hR" secondAttribute="trailing" constant="227" id="G0P-fu-R9M"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="top" secondItem="mEd-bW-xG3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IGG-em-f1e"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="top" secondItem="26" secondAttribute="top" constant="19" id="KGI-gf-TAe"/>
                             <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LAk-gc-aCl"/>
@@ -77,6 +81,7 @@
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
+                            <constraint firstItem="Nyi-ck-8hR" firstAttribute="top" secondItem="nbu-fr-Znd" secondAttribute="top" type="default" id="wtS-Ul-nbp"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
