@@ -1,6 +1,8 @@
+require 'page_navigation'
+
 module Furter
   module Navigation
-    include Frank::Cucumber::FrankHelper
+    include PageNavigation, Frank::Cucumber::FrankHelper
 
     def wait_a_bit_for_animations
       begin
