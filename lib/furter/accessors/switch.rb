@@ -4,7 +4,7 @@ module Furter
       include Furter
 
       def on?
-        frankly_map(selector, "isOn")[0]
+        frankly_map(selector, 'isOn')[0]
       end
 
       def set(on_or_off)
