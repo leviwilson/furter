@@ -17,6 +17,7 @@ module Furter
 
     def label(name, locator)
       define_method("#{name}") do
+        Furter::Accessors::Label.new(locator).text
       end
     end
 

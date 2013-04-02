@@ -4,6 +4,7 @@ class SomePage
   include Furter
 
   text(:text_field, :placeholder => 'text')
+  label(:label_field, :label => 'id')
   view(:generic_view, :label => 'id')
   button(:button_field, :label => 'id')
   switch(:switch_field, :label => 'id')
@@ -37,6 +38,20 @@ describe Furter::Accessors do
     it 'can dish out a view' do
       screen.text_field_view.should be(text)
     end
+  end
+
+  context 'label' do
+    let(:label) { double('Label control') }
+
+    before(:each) do
+      Furter::Accessors::Label.should_receive(:new).with(:label => 'id').and_return(label)
+    end
+
+    it 'knows its value' do
+      label.should_receive(:text).and_return('expected text')
+      screen.label_field.should eq('expected text')
+    end
+
   end
 
   context 'view' do
