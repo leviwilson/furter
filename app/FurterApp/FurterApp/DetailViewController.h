@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *labelTextField;
 @property (weak, nonatomic) IBOutlet UIButton *textButton;
 @property (weak, nonatomic) IBOutlet UIButton *labeledButton;
+@property (weak, nonatomic) IBOutlet UILabel *labeledLabel;
 
 @property (strong, nonatomic) id detailItem;
 

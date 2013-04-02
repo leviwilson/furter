@@ -46,6 +46,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     [self.labeledButton setAccessibilityLabel:@"labeledButtonId"];
+    [self.labeledLabel setAccessibilityLabel:@"labelByAccessibilityLabel"];
 }
 
 - (void)didReceiveMemoryWarning
