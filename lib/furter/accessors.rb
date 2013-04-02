@@ -15,6 +15,11 @@ module Furter
       end
     end
 
+    def label(name, locator)
+      define_method("#{name}") do
+      end
+    end
+
     def view(name, locator)
       define_method("#{name}") do
         Furter::Accessors::View.new(locator).click

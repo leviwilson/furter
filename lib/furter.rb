@@ -9,6 +9,7 @@ require 'furter/accessors/switch'
 require 'furter/accessors/table'
 require 'furter/accessors/table_item'
 require 'furter/accessors/text'
+require 'furter/accessors/label'
 
 module Furter
   include Frank::Cucumber::FrankHelper
