@@ -19,6 +19,11 @@ describe Furter::Accessors::View do
       with_extras = Furter::Accessors::View.new(:label => 'id', :extra => 'label')
       with_extras.send(:selector).should eq("view marked:'id' label")
     end
+
+    it 'can be found by text' do
+      by_text = Furter::Accessors::View.new(:text => "Some Text")
+      by_text.send(:selector).should eq("view text:'Some Text'")
+    end
   end
 
   it 'can be clicked' do

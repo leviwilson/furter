@@ -21,7 +21,16 @@ module Furter
 
       private
       def selector
-        "#{view_class} marked:'#{@locator[:label]}'#{selector_extra}"
+        "#{view_class} #{selector_how}#{selector_extra}"
+      end
+
+      def selector_how
+        case
+          when @locator[:label]
+            "marked:'#{@locator[:label]}'"
+          when @locator[:text]
+            "text:'#{@locator[:text]}'"
+        end
       end
 
       def selector_extra

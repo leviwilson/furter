@@ -5,6 +5,7 @@ class DetailPage
   text(:text_label, :label => 'textByLabel')
 
   label(:label_id, :label => 'labelByAccessibilityLabel')
+  label(:label_text, :text => 'Placeholder')
 
   button(:button_text, :text => 'Some Button')
   button(:button_label, :label => 'labeledButtonId')
