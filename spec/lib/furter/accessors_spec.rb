@@ -52,6 +52,10 @@ describe Furter::Accessors do
       screen.label_field.should eq('expected text')
     end
 
+    it 'can dish out a view' do
+      screen.label_field_view.should be(label)
+    end
+
   end
 
   context 'view' do
