@@ -9,6 +9,11 @@ describe Furter::Accessors::Label do
       label_control = Furter::Accessors::Label.new(:label => 'someAccessibilityLabel')
       label_control.send(:selector).should eq("label marked:'someAccessibilityLabel'")
     end
+
+    it 'can be found by text' do
+      label_control = Furter::Accessors::Label.new(:text => 'Text Value')
+      label_control.send(:selector).should eq("label text:'Text Value'")
+    end
   end
 
   it 'knows the text value' do
