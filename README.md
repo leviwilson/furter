@@ -1,20 +1,76 @@
 # Furter
 
-TODO: Write a gem description
+A gem to assist in building page-object like structures for testing iOS applications.  `furter` uses [`frank-cucumber`](http://testingwithfrank.com/) to automate iOS applications using page-objects.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'furter', :git => 'https://github.com/leviwilson/furter.git'
+    source 'https://rubygems.org'
+    gem 'furter'
 
 And then execute:
 
     $ bundle
+    
+### Setting Up Cucumber
+After your `Gemfile` has been updated, add these lines to your `features/support/env.rb` file in `cucumber`:
 
-## Usage
+```ruby
+require 'furter'
+require 'rspec-expectations'
 
-TODO: Write usage instructions here
+World(Furter::Navigation)
+
+APP_BUNDLE_PATH = File.expand_path( '../../../app/FurterApp/Frank/frankified_build/FurterApp.app', __FILE__ )
+
+Frank::Cucumber::FrankHelper.use_shelley_from_now_on
+
+Before do
+  ios_version = '6.1'
+  ios_idiom = 'iPhone'
+  
+  launch_app APP_BUNDLE_PATH, ios_version, ios_idiom
+end
+```
+
+## Defining Screens
+Simply create a new class that describes the screen that you are working with and include `Furter`.
+
+```ruby
+class LoginScreen
+  include Furter
+  
+  text(:username, :label => 'usernameField')
+  text(:password, :label => 'passwordField')
+  button(:login, :text => 'Login')
+end
+```
+
+In your step definition, use the `Furter::Navigation#on` method when using your page-object.  This method will create your screen and then wait until all animations have stopped before letting you interact with your page-object.
+
+```
+When ^I login to my application$ do
+  on(LoginScreen) do |screen|
+    screen.username = 'user@example.com'
+    screen.password = '$3cr3t`
+    screen.login
+  end
+end
+```
+
+### Waiting for Screens
+If you would like for `furter` to wait until your screen becomes "active" (perhaps after some asynchronous call has come back), simply define an `active?` method and `furter` will wait until this returns `true` before interacting with it.
+
+```
+class LandingScreen
+  include Furter
+  
+  def active?
+    has_text? 'You have successfully logged in!'
+  end
+end
+```
 
 ## Contributing
 
