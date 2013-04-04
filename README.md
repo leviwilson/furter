@@ -22,7 +22,7 @@ require 'rspec-expectations'
 
 World(Furter::Navigation)
 
-APP_BUNDLE_PATH = File.expand_path( '../../../app/FurterApp/Frank/frankified_build/FurterApp.app', __FILE__ )
+APP_BUNDLE_PATH = File.expand_path( '../../../Frank/frankified_build/YourApp.app', __FILE__ )
 
 Frank::Cucumber::FrankHelper.use_shelley_from_now_on
 
