@@ -27,10 +27,10 @@ APP_BUNDLE_PATH = File.expand_path( '../../../app/FurterApp/Frank/frankified_bui
 Frank::Cucumber::FrankHelper.use_shelley_from_now_on
 
 Before do
-  ios_version = '6.1'
-  ios_idiom = 'iPhone'
+  version = '6.1'
+  idiom = 'iPhone'
   
-  launch_app APP_BUNDLE_PATH, ios_version, ios_idiom
+  launch_app APP_BUNDLE_PATH, version, idiom
 end
 ```
 
@@ -49,7 +49,7 @@ end
 
 In your step definition, use the `Furter::Navigation#on` method when using your page-object.  This method will create your screen and then wait until all animations have stopped before letting you interact with your page-object.
 
-```
+```ruby
 When ^I login to my application$ do
   on(LoginScreen) do |screen|
     screen.username = 'user@example.com'
@@ -62,7 +62,7 @@ end
 ### Waiting for Screens
 If you would like for `furter` to wait until your screen becomes "active" (perhaps after some asynchronous call has come back), simply define an `active?` method and `furter` will wait until this returns `true` before interacting with it.
 
-```
+```ruby
 class LandingScreen
   include Furter
   
