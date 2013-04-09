@@ -74,5 +74,11 @@ module Furter
         Furter::Accessors::Switch.new(locator)
       end
     end
+
+    def slider(name, locator)
+      define_method("#{name}_view") do
+        Furter::Accessors::Slider.new(locator)
+      end
+    end
   end
 end

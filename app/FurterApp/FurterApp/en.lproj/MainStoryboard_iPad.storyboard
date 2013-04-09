@@ -106,6 +106,12 @@
                                     <segue destination="2m6-NE-oGx" kind="push" id="g3T-p0-Sec"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wB4-9F-vl7">
+                                <accessibility key="accessibilityConfiguration" label="sliderByLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="dCS-tQ-uoe"/>
+                                </constraints>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -124,6 +130,7 @@
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="leading" secondItem="HNa-e4-2od" secondAttribute="leading" type="default" id="TI6-aB-T6l"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="trailing" secondItem="MgB-Y1-P3J" secondAttribute="trailing" type="default" id="Tkv-gE-Bb0"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="top" secondItem="26" secondAttribute="top" constant="23" id="WAb-82-oiE"/>
+                            <constraint firstAttribute="bottom" secondItem="wB4-9F-vl7" secondAttribute="bottom" constant="250" id="bJ6-kP-IlL"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="trailing" secondItem="mEd-bW-xG3" secondAttribute="trailing" type="default" id="e4T-wS-zIa"/>
                             <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="top" secondItem="26" secondAttribute="top" constant="120" id="fxO-Da-wfr"/>
@@ -132,6 +139,7 @@
                             <constraint firstItem="n4M-Kb-ePv" firstAttribute="trailing" secondItem="6Hu-uu-EUY" secondAttribute="trailing" type="default" id="kXJ-R6-5W3"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
                             <constraint firstItem="Nyi-ck-8hR" firstAttribute="top" secondItem="nbu-fr-Znd" secondAttribute="top" type="default" id="wtS-Ul-nbp"/>
+                            <constraint firstItem="wB4-9F-vl7" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="206" id="zbX-ES-KTX"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -142,6 +150,7 @@
                         <outlet property="labelTextField" destination="HNa-e4-2od" id="SHv-1W-wQm"/>
                         <outlet property="labeledButton" destination="6Hu-uu-EUY" id="lP4-Wp-TLL"/>
                         <outlet property="placeholderTextField" destination="mEd-bW-xG3" id="WJN-WF-CeJ"/>
+                        <outlet property="slider" destination="wB4-9F-vl7" id="tyV-Zf-nQd"/>
                         <outlet property="textButton" destination="MgB-Y1-P3J" id="dgB-Uo-P2L"/>
                     </connections>
                 </viewController>
@@ -250,26 +259,6 @@
             <point key="canvasLocation" x="-366" y="248"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onLabeledButtonClicked:"/>
-                <relationship kind="action" name="someButtonClick:"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="labeledButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="placeholderTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

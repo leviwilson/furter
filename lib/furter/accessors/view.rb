@@ -21,7 +21,7 @@ module Furter
 
       private
       def selector
-        "#{view_class} marked:'#{@locator[:label]}'#{selector_extra}"
+      "#{view_class} marked:'#{@locator[:label]}'#{selector_extra}"
       end
 
       def selector_extra
