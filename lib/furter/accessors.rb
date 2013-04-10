@@ -88,9 +88,6 @@ module Furter
       define_method("#{name}_max") do |time|
         Furter::Accessors::Slider.new(locator).max_min time
       end
-      define_method("#{name}_progress_min") do |time|
-        Furter::Accessors::Slider.new(locator).progress_min time
-      end
     end
   end
 end
