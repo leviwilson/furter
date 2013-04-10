@@ -15,3 +15,6 @@ Then /^I can see the progress of the slider identified by "([^"]*)" is "([^"]*)"
   slider = on(DetailPage).send("slider_#{label}_view")
   slider.progress.should == 0.20
 end
+When /^I set the max minutes to "([^"]*)" minutes$/ do |minutes|
+  pending
+end
