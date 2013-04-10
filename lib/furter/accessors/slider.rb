@@ -9,14 +9,11 @@ module Furter
       end
 
       def move(value)
-        p 'setting value'
-        p value
         frankly_map(selector, 'setValue:animated:', value, 'YES')
 
       end
 
       def progress
-       p 'getting progress'
        p frankly_map(selector, 'value')[0]
       end
 
