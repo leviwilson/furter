@@ -10,5 +10,5 @@ class DetailPage
 
   switch(:switch_toggle, :label => 'switchToggle')
 
-  slider(:slider_label, :label=>'sliderByLabel')
+  slider(:slider_label, :label=> 'sliderByLabel')
 end
