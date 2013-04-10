@@ -9,7 +9,7 @@ end
 
 When /^I set the progress of the slider identified by "([^"]*)" to "([^"]*)"$/ do |label, value|
   slider = on(DetailPage).send("slider_#{label}_view")
-  slider.move value
+  slider.move value.to_f
 end
 Then /^I can see the progress of the slider identified by "([^"]*)" is "([^"]*)"$/ do |label, value|
   slider = on(DetailPage).send("slider_#{label}_view")

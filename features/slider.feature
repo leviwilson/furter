@@ -5,7 +5,7 @@ Scenario: Interacting with the slider
 
 Scenario: Getting and Setting value of the slider
   Given I have a slider identified by "label"
-  When I set the progress of the slider identified by "label" to ".20"
+  When I set the progress of the slider identified by "label" to "0.2"
   Then I can see the progress of the slider identified by "label" is "0.2"
 
 Scenario: Getting and setting the value of the slider by minutes
