@@ -10,7 +10,6 @@ module Furter
 
       def move(value)
         frankly_map(selector, 'setValue:animated:', value, 'YES')
-
       end
 
       def progress
@@ -40,9 +39,7 @@ module Furter
         frankly_map(selector, 'setValue:animated:', percent, 'YES')
       end
 
-
-
-      private
+    private
       def shave_colon time
         if time.include? ':'
           time = time[1..2]
