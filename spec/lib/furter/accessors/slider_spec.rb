@@ -27,7 +27,14 @@ describe Furter::Accessors::Slider do
       slider.should_receive(:frankly_map).with(selector, 'setValue:animated:', 0.50, 'YES')
       slider.max_min '10:00'
       slider.progress_min '5:00'
-      end
+    end
+
+    it 'can set slider value based on time in seconds' do
+      slider.should_receive(:frankly_map).with(selector, 'setValue:animated:', 0.2, 'YES')
+      slider.max_min ':25'
+      slider.progress_min ':05'
+    end
+
   end
 end
 

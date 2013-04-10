@@ -14,7 +14,7 @@ module Furter
       end
 
       def progress
-       p frankly_map(selector, 'value')[0]
+        frankly_map(selector, 'value')[0]
       end
 
       def selector
