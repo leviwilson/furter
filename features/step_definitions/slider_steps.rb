@@ -18,8 +18,7 @@ end
 When /^I set the max to "([^"]*)" minutes and progress to "([^"]*)" of the slider identified by "([^"]*)"$/ do |max, progress, label|
 
   on(DetailPage) do |screen|
-    slider = screen.send("slider_#{label}_view")
-    slider.max_min max
-    slider.progress_min progress
+    screen.send("slider_#{label}_max", max)
+    screen.send("slider_#{label}_min", progress)
   end
 end

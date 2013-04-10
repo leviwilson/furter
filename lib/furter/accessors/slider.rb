@@ -24,18 +24,18 @@ module Furter
       def max_min(time)
 
         if time.length == 3
-          @max = shave_colon time
+          @@max = shave_colon time
         else
-          @max = to_seconds time
+          @@max = to_seconds time
         end
       end
 
       def progress_min(time)
 
         if time.length == 3
-          @min = shave_colon time
+          @@min = shave_colon time
         else
-          @min = to_seconds time
+          @@min = to_seconds time
           end
         frankly_map(selector, 'setValue:animated:', percent, 'YES')
       end
@@ -72,7 +72,7 @@ module Furter
       end
 
       def percent
-        @min.to_f / @max.to_f
+        @@min.to_f / @@max.to_f
       end
     end
   end
