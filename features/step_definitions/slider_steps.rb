@@ -7,10 +7,10 @@ Given /^I have a slider identified by "([^"]*)"$/ do |how|
 end
 
 
-When /^I set the progress of the slider identified by "([^"]*)" to "([^"]*)"$/ do |label, value|
-  on(DetailPage).send("slider_#{label}_move", value.to_f)
+When /^I set the progress of the slider identified by "([^"]*)" to "([^"]*)"$/ do |how, value|
+  on(DetailPage).send("slider_#{how}_move", value.to_f)
 end
 
-Then /^I can see the progress of the slider identified by "([^"]*)" is "([^"]*)"$/ do |label, value|
-  on(DetailPage).send("slider_#{label}_progress").should eq(value.to_f)
+Then /^I can see the progress of the slider identified by "([^"]*)" is "([^"]*)"$/ do |how, value|
+  on(DetailPage).send("slider_#{how}_progress").should eq(value.to_f)
 end
