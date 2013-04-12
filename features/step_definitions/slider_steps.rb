@@ -14,11 +14,3 @@ end
 Then /^I can see the progress of the slider identified by "([^"]*)" is "([^"]*)"$/ do |label, value|
   on(DetailPage).send("slider_#{label}_progress").should eq(value.to_f)
 end
-
-When /^I set the max to "([^"]*)" minutes and progress to "([^"]*)" of the slider identified by "([^"]*)"$/ do |max, progress, label|
-
-  on(DetailPage) do |screen|
-    screen.send("slider_#{label}_max", max)
-    screen.send("slider_#{label}_min", progress)
-  end
-end
