@@ -14,6 +14,7 @@
 @end
 
 @implementation DetailViewController
+@synthesize slider; 
 
 #pragma mark - Managing the detail item
 
@@ -47,6 +48,7 @@
     [self configureView];
     [self.labeledButton setAccessibilityLabel:@"labeledButtonId"];
     [self.labeledLabel setAccessibilityLabel:@"labelByAccessibilityLabel"];
+    [slider setAccessibilityLabel:@"sliderByLabel"]; 
 }
 
 - (void)didReceiveMemoryWarning

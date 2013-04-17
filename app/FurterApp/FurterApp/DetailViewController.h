@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *textButton;
 @property (weak, nonatomic) IBOutlet UIButton *labeledButton;
 @property (weak, nonatomic) IBOutlet UILabel *labeledLabel;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @property (strong, nonatomic) id detailItem;
 

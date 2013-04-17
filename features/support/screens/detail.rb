@@ -12,4 +12,6 @@ class DetailPage
   button(:go_elsewhere, :text => 'Go Elsewhere')
 
   switch(:switch_toggle, :label => 'switchToggle')
+
+  slider(:slider_label, :label=> 'sliderByLabel')
 end

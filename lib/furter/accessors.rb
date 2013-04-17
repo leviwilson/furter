@@ -83,5 +83,23 @@ module Furter
         Furter::Accessors::Switch.new(locator)
       end
     end
+
+    def slider(name, locator)
+      define_method("#{name}_view") do
+        Furter::Accessors::Slider.new(locator)
+      end
+      define_method("#{name}_move") do |value|
+        Furter::Accessors::Slider.new(locator).move value
+      end
+      define_method("#{name}_progress") do
+        Furter::Accessors::Slider.new(locator).progress
+      end
+      define_method("#{name}_max") do |time|
+        Furter::Accessors::Slider.new(locator).max_min time
+      end
+      define_method("#{name}_min") do |time|
+        Furter::Accessors::Slider.new(locator).progress_min time
+      end
+    end
   end
 end

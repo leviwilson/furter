@@ -10,6 +10,7 @@ require 'furter/accessors/table'
 require 'furter/accessors/table_item'
 require 'furter/accessors/text'
 require 'furter/accessors/label'
+require 'furter/accessors/slider'
 
 module Furter
   include Frank::Cucumber::FrankHelper
