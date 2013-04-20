@@ -48,7 +48,41 @@ module Furter
     end
   end
 
-  def active?
+  def active?(*controllers)
+
+    return screen_has? controllers if controllers.length > 0
     true
+
   end
+
+  def screen_has?(*controllers)
+      all = frankly_map("view:'UIView'", 'nextResponder')
+
+      controllers.each_with_index do |controller, i|
+        match controller, all
+      end
+
+
+  end
+
+  def match(which, all)
+
+    control = format which[0]
+
+     return false unless all.include? control
+      true
+  end
+
+
+  private
+
+  def format(name)
+
+    formatted = "<" << name << ">"
+    p formatted
+
+  end
+
 end
+
+

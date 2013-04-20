@@ -5,3 +5,9 @@ end
 Then /^I should end up on the "([^"]*)"$/ do |where|
   on(where.to_class).should be_active
 end
+
+Then /^the "([^"]*)" indicates the "([^"]*)" is displaying its views$/ do |where, controller|
+
+  on(where.to_class).should be_active controller
+
+end
