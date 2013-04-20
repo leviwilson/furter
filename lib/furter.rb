@@ -49,29 +49,26 @@ module Furter
   end
 
   def active?(*controllers)
-
-    p screen_has? controllers
-
     return screen_has? controllers if controllers.count > 0
     true
   end
 
   def screen_has?(*controllers)
-      responders = frankly_map("view:'UIView'", 'nextResponder')
-      match controllers[0], responders
+      element_types = frankly_map("view:'UIView'", 'nextResponder')
+      match controllers[0], element_types
       end
   end
 
-  def match(which, all)
+  def match(type, types)
 
-    return false if which[0].nil?
-    control = add_angles which[0]
-    all.include? control
+    return false if type[0].nil?
+    type = add_angles_to type[0]
+    types.include? type
 
   end
 
-  def add_angles(name)
-   formatted = "<" << name << ">"
+  def add_angles_to(type_name)
+   formatted = "<" << type_name << ">"
   end
 
 
