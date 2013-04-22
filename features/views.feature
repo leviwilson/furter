@@ -1,4 +1,4 @@
-Feature: Working with the collection of on screen elements
+Feature: Finding View Controllers on the screen
 
-  Scenario: Declaring the active page
-    Then the "DetailPage" is active
+  Scenario: Looking for the DetailsViewController
+    Then the "DetailPage" has a DetailViewController

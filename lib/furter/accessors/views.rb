@@ -1,6 +1,7 @@
 module Furter
   module Accessors
-    class Screen
+    class Views
+      include Frank::Cucumber::FrankHelper
       def has?(*view_classes)
         all = frankly_map("view:'UIView'", 'nextResponder')
         view_classes.map! {|view_class| format view_class}

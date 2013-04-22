@@ -98,7 +98,7 @@ module Furter
 
     def views(*view_classes)
       define_method(:active?) do
-        screen_has?(*view_classes)
+        Furter::Accessors::Views.new.has?(view_classes)
       end
     end
   end

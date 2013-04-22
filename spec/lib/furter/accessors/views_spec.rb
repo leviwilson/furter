@@ -1,41 +1,41 @@
 require 'spec_helper'
 
-describe Furter::Accessors::Screen do
+describe Furter::Accessors::Window do
 
   before(:each) do
-    @screen = Furter::Accessors::Screen.new
+    @views = Furter::Accessors::Views.new
   end
 
   context 'screen with one element' do
 
     before(:each) do
-      @screen.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>'])
+      @views.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>'])
     end
 
     it 'can report screen element was found' do
-      @screen.has?('First').should be_true
+      @views.has?('First').should be_true
     end
 
     it 'can report screen element was not found' do
-      @screen.has?('Second').should be_false
+      @views.has?('Second').should be_false
     end
   end
 
   context 'screen with two elements' do
     before(:each) do
-      @screen.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>'])
+      @views.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>'])
     end
 
     it 'can find the first element' do
-      @screen.has? 'First'
+      @views.has? 'First'
     end
 
     it 'can find the last element' do
-      @screen.has? 'Second'
+      @views.has? 'Second'
     end
 
     it 'can find both elements' do
-      @screen.has? 'First' 'Second'
+      @views.has? 'First' 'Second'
     end
   end
 
