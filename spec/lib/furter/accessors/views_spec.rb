@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Furter::Accessors::Window do
+describe Furter::Accessors::Views do
 
   before(:each) do
     @views = Furter::Accessors::Views.new
@@ -41,15 +41,15 @@ describe Furter::Accessors::Window do
 
   context 'screen with many elements' do
     before(:each) do
-      @screen.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>', '<Third>'])
+      @views.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>', '<Third>'])
     end
 
     it'can find the middle element' do
-      @screen.has? 'Second'
+      @views.has? 'Second'
     end
 
     it 'can find all the elements' do
-      @screen.has? 'Third' 'First' 'Second'
+      @views.has? 'Third' 'First' 'Second'
     end
   end
 end

@@ -14,10 +14,6 @@ module Furter
     def on(cls, &block)
       screen = cls.new
       wait_a_bit_for_animations
-      wait_until(:message => "Expected #{cls} to be active", :timeout => 30) do
-        true #screen.active?
-      end
-      wait_a_bit_for_animations
       block.call screen if block
       screen
     end
