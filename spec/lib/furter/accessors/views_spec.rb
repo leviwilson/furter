@@ -55,28 +55,3 @@ describe Furter::Accessors::Views do
 end
 
 
-
-
-
-    #before(:each) do
-    #  screen = Furter::Accessors::Screen('First')
-    #  screen.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['First', 'Second', 'Third'])
-    #end
-    #
-    #it 'can find one view controller' do
-    #  screen.screen_has?('Third').should be_true
-    #end
-    #
-    #it 'can find some view controllers' do
-    #  screen.screen_has?('Third', 'First').should be_true
-    #end
-    #
-    #it 'can find all view controllers' do
-    #  screen.screen_has?('Third', 'Second' 'First').should be_true
-    #end
-    #
-    #it 'can send indicator if view controller not found' do
-    #  screen.screen_has?('Fourth'). should be_false
-    #end
-
-
