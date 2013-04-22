@@ -8,6 +8,7 @@ class SomePage
   view(:generic_view, :label => 'id')
   button(:button_field, :label => 'id')
   switch(:switch_field, :label => 'id')
+  views('First')
 end
 
 describe Furter::Accessors do

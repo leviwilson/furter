@@ -95,5 +95,11 @@ module Furter
         Furter::Accessors::Slider.new(locator).progress
       end
     end
+
+    def views(*view_classes)
+      define_method(:active?) do
+        screen_has?(*view_classes)
+      end
+    end
   end
 end

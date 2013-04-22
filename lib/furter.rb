@@ -11,6 +11,7 @@ require 'furter/accessors/table_item'
 require 'furter/accessors/text'
 require 'furter/accessors/label'
 require 'furter/accessors/slider'
+require 'furter/accessors/screen'
 
 module Furter
   include Frank::Cucumber::FrankHelper
@@ -47,29 +48,7 @@ module Furter
       touch locator
     end
   end
-
-  def active?(*controllers)
-    return screen_has? controllers if controllers.count > 0
-    true
-  end
-
-  def screen_has?(*controllers)
-      element_types = frankly_map("view:'UIView'", 'nextResponder')
-      match controllers[0], element_types
-      end
-  end
-
-  def match(type, types)
-
-    return false if type[0].nil?
-    type = add_angles_to type[0]
-    types.include? type
-
-  end
-
-  def add_angles_to(type_name)
-   formatted = "<" << type_name << ">"
-  end
+end
 
 
 
