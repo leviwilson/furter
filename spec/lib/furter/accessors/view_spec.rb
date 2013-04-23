@@ -45,34 +45,32 @@ describe Furter::Accessors::View do
 
     before(:each) do
       view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>'])
-      @views = view.next_responders
     end
 
     it 'can report screen element was found' do
-      @views.include? 'First'.should be_true
+      view.next_responders.should include('First')
     end
 
     it 'can report screen element was not found' do
-      @views.include?('Second').should be_false
+      view.next_responders.should_not include('Second')
     end
   end
 
   context 'screen with many view responders' do
     before(:each) do
       view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>', '<Third>'])
-      @views = view.next_responders
     end
 
     it'can find the first element' do
-      @views.include? 'First'.should be_true
+      view.next_responders.should include('First')
     end
 
     it'can find the middle element' do
-      @views.include? 'Second'.should be_true
+      view.next_responders.should include('Second')
     end
 
     it 'can find all the elements' do
-      @views.include? 'Third' 'First' 'Second'.should be_true
+      view.next_responders.should include('Third', 'First', 'Second')
     end
   end
 end

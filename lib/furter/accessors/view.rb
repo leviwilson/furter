@@ -20,7 +20,9 @@ module Furter
       end
 
       def next_responders
-        frankly_map("view:'UIView'", 'nextResponder')
+        frankly_map("view:'UIView'", 'nextResponder').map do |r|
+          r.gsub(/[<>]/,'')
+        end
       end
 
       private
