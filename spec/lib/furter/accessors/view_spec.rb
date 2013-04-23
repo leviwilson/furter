@@ -40,4 +40,39 @@ describe Furter::Accessors::View do
     view.should_receive(:frankly_map).with(selector, 'isEnabled').and_return([true])
     view.should be_enabled
   end
+
+  context 'screen with one view responder' do
+
+    before(:each) do
+      view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>'])
+      @views = view.next_responders
+    end
+
+    it 'can report screen element was found' do
+      @views.include? 'First'.should be_true
+    end
+
+    it 'can report screen element was not found' do
+      @views.include?('Second').should be_false
+    end
+  end
+
+  context 'screen with many view responders' do
+    before(:each) do
+      view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>', '<Third>'])
+      @views = view.next_responders
+    end
+
+    it'can find the first element' do
+      @views.include? 'First'.should be_true
+    end
+
+    it'can find the middle element' do
+      @views.include? 'Second'.should be_true
+    end
+
+    it 'can find all the elements' do
+      @views.include? 'Third' 'First' 'Second'.should be_true
+    end
+  end
 end

@@ -19,6 +19,10 @@ module Furter
         frankly_map(selector, 'isEnabled')[0]
       end
 
+      def next_responders
+        frankly_map("view:'UIView'", 'nextResponder')
+      end
+
       private
       def selector
         "#{view_class} #{selector_how}#{selector_extra}"
