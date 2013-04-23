@@ -41,36 +41,8 @@ describe Furter::Accessors::View do
     view.should be_enabled
   end
 
-  context 'screen with one view responder' do
-
-    before(:each) do
-      view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>'])
-    end
-
-    it 'can report screen element was found' do
-      view.next_responders.should include('First')
-    end
-
-    it 'can report screen element was not found' do
-      view.next_responders.should_not include('Second')
-    end
-  end
-
-  context 'screen with many view responders' do
-    before(:each) do
-      view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>', '<Third>'])
-    end
-
-    it'can find the first element' do
-      view.next_responders.should include('First')
-    end
-
-    it'can find the middle element' do
-      view.next_responders.should include('Second')
-    end
-
-    it 'can find all the elements' do
-      view.next_responders.should include('Third', 'First', 'Second')
-    end
+  it 'should know about next responders' do
+    view.should_receive(:frankly_map).with("view:'UIView'", 'nextResponder').and_return(['<First>', '<Second>', '<Third>'])
+    view.next_responders.should eq ['First', 'Second', 'Third']
   end
 end
