@@ -14,4 +14,6 @@ class DetailPage
   switch(:switch_toggle, :label => 'switchToggle')
 
   slider(:slider_label, :label=> 'sliderByLabel')
+
+  views('DetailViewController')
 end

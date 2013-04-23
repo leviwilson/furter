@@ -47,8 +47,7 @@ module Furter
       touch locator
     end
   end
-
-  def active?
-    true
-  end
 end
+
+
+

@@ -8,6 +8,7 @@ class SomePage
   view(:generic_view, :label => 'id')
   button(:button_field, :label => 'id')
   switch(:switch_field, :label => 'id')
+  views('First')
 end
 
 describe Furter::Accessors do
@@ -111,6 +112,12 @@ describe Furter::Accessors do
 
     it 'can return the raw view' do
       screen.switch_field_view.should be(switch)
+    end
+  end
+
+  context 'views' do
+    it 'defines and active method' do
+      screen.respond_to?(:active?).should be_true
     end
   end
 end
