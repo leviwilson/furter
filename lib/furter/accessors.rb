@@ -98,7 +98,7 @@ module Furter
 
     def views(*view_classes)
       define_method(:active?) do
-        Furter::Accessors::Views.new.has?(view_classes)
+        (view_classes & Furter::Accessors::View.new.next_responders) == view_classes
       end
     end
   end

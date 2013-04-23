@@ -3,5 +3,5 @@ When /^I navigate to the "([^"]*)" using the "([^"]*)" route$/ do |where, which_
 end
 
 Then /^I should end up on the "([^"]*)"$/ do |where|
-
+  on(where.to_class).should be_active
 end
