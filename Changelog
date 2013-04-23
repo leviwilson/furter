@@ -1,3 +1,7 @@
+=== Version 0.3.1
+* added a new slider accessor
+* added a views accessor to define which view controllers should be on a screen
+
 === Version 0.3 / 2013-04-03
 Initial release with support for text, label, button, view, alert_button,
 table, table_item, map_pin and switch controls
