@@ -8,7 +8,7 @@ class SomePage
   view(:generic_view, :label => 'id')
   button(:button_field, :label => 'id')
   switch(:switch_field, :label => 'id')
-  views('First')
+  views('First', 'Fifth', 'Seventh')
 end
 
 describe Furter::Accessors do
@@ -116,8 +116,25 @@ describe Furter::Accessors do
   end
 
   context 'views' do
-    it 'defines and active method' do
-      screen.respond_to?(:active?).should be_true
+    let(:view) { double('View') }
+
+    before(:each) do
+      Furter::Accessors::View.should_receive(:new).and_return(view)
+    end
+
+    it 'is active if it has all of the views' do
+      view.should_receive(:next_responders).and_return(['First', 'Fifth', 'Seventh'])
+      screen.should be_active
+    end
+
+    it 'does not care about the order' do
+      view.should_receive(:next_responders).and_return(['Seventh', 'First', 'Fifth'])
+      screen.should be_active
+    end
+
+    it 'is inactive if not all views are represented' do
+      view.should_receive(:next_responders).and_return(['First', 'Fifth', 'Not The Seventh'])
+      screen.should_not be_active
     end
   end
 end
