@@ -16,7 +16,7 @@ module Furter
       wait_a_bit_for_animations
       wait_until(:message => "Expected #{cls} to be active", :timeout => 30) do
         screen.active?
-      end if respond_to?(:active?)
+      end if screen.respond_to?(:active?)
       wait_a_bit_for_animations
       block.call screen if block
       screen
