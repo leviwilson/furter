@@ -114,4 +114,10 @@ describe Furter::Accessors do
       screen.switch_field_view.should be(switch)
     end
   end
+
+  context 'views' do
+    it 'defines and active method' do
+      screen.respond_to?(:active?).should be_true
+    end
+  end
 end
