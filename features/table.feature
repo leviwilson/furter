@@ -1,0 +1,1 @@
+Feature: Working with table view
