@@ -18,4 +18,18 @@ describe Furter::Accessors::Table do
       table.item_at(0)
     end
   end
+
+  context 'getting table data' do
+    it 'can get total number of rows in table with one section' do
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView', 'numberOfSections'").and_return(1)
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView', 'numberOfRowsInSection', #{section}").and_return(5)
+      table.row_count.should == 5
+    end
+    #it 'can get total number of rows in table with multiple sections' do
+    #  table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfSections').and_return(2)
+    #  table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection', '1').and_return(5)
+    #  table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection', '2').and_return(5)
+    #  table.row_count.should == 10
+    #end
+  end
 end
