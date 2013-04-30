@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-
+#import "PagingViewController.h"
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -86,7 +86,10 @@
     [self.labelTextField setText:@"The button was clicked!"];
 }
 
-- (IBAction)goToPaging:(id)sender {
+- (IBAction)goToPaging:(id)sender
+{
+    PagingViewController *pagingViewController = [[PagingViewController alloc] init];
+    [[self navigationController] pushViewController:pagingViewController animated:YES];
 }
 - (IBAction)onLabeledButtonClicked:(id)sender {
     [self.labelTextField setText:@"The labeled button was clicked!"];
