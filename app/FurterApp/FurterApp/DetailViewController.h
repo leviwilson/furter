@@ -12,6 +12,7 @@
 {
     NSArray *detaiItems;
 }
+@property (weak, nonatomic) IBOutlet UIButton *pagingButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *placeholderTextField;
 @property (weak, nonatomic) IBOutlet UITextField *labelTextField;
@@ -28,5 +29,6 @@
 
 - (IBAction)onLabeledButtonClicked:(id)sender;
 - (IBAction)someButtonClick:(id)sender;
+- (IBAction)goToPaging:(id)sender;
 
 @end

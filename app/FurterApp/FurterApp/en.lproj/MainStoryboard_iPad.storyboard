@@ -129,6 +129,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-pl-1Xz">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Go to Paging">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToPaging:" destination="4" eventType="touchUpInside" id="Mh2-Xa-DLG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,6 +149,7 @@
                             <constraint firstItem="79f-eU-bDt" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1JC-Aj-NzB"/>
                             <constraint firstItem="wB4-9F-vl7" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1e2-7D-F2w"/>
                             <constraint firstItem="n4M-Kb-ePv" firstAttribute="top" secondItem="6Hu-uu-EUY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9II-fH-f7K"/>
+                            <constraint firstItem="9lL-pl-1Xz" firstAttribute="trailing" secondItem="n4M-Kb-ePv" secondAttribute="trailing" type="default" id="Bif-vT-e8y"/>
                             <constraint firstAttribute="trailing" secondItem="Nyi-ck-8hR" secondAttribute="trailing" constant="227" id="G0P-fu-R9M"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="leading" secondItem="MgB-Y1-P3J" secondAttribute="leading" type="default" id="GwV-n1-zD7"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="top" secondItem="mEd-bW-xG3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IGG-em-f1e"/>
@@ -155,7 +169,9 @@
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
                             <constraint firstItem="n4M-Kb-ePv" firstAttribute="trailing" secondItem="6Hu-uu-EUY" secondAttribute="trailing" type="default" id="kXJ-R6-5W3"/>
                             <constraint firstItem="dbq-cK-ZJI" firstAttribute="top" secondItem="MgB-Y1-P3J" secondAttribute="top" type="default" id="lA2-Cv-0TB"/>
+                            <constraint firstItem="9lL-pl-1Xz" firstAttribute="top" secondItem="26" secondAttribute="top" constant="278" id="oYb-MP-o26"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
+                            <constraint firstItem="9lL-pl-1Xz" firstAttribute="leading" secondItem="n4M-Kb-ePv" secondAttribute="leading" type="default" id="qSc-XT-Mrq"/>
                             <constraint firstAttribute="bottom" secondItem="wB4-9F-vl7" secondAttribute="bottom" constant="259" id="ryZ-8O-GYg"/>
                             <constraint firstAttribute="trailing" secondItem="dbq-cK-ZJI" secondAttribute="trailing" constant="30" id="wCi-fU-FZ6"/>
                             <constraint firstItem="Nyi-ck-8hR" firstAttribute="top" secondItem="nbu-fr-Znd" secondAttribute="top" type="default" id="wtS-Ul-nbp"/>
@@ -170,6 +186,7 @@
                         <outlet property="labelTextField" destination="HNa-e4-2od" id="SHv-1W-wQm"/>
                         <outlet property="labeledButton" destination="6Hu-uu-EUY" id="lP4-Wp-TLL"/>
                         <outlet property="labeledLabel" destination="27" id="GUQ-6K-Ygb"/>
+                        <outlet property="pagingButton" destination="9lL-pl-1Xz" id="gyc-3e-VYe"/>
                         <outlet property="placeholderTextField" destination="mEd-bW-xG3" id="WJN-WF-CeJ"/>
                         <outlet property="selectedItemLabel" destination="PWK-R2-LR4" id="S4u-fE-GlJ"/>
                         <outlet property="slider" destination="wB4-9F-vl7" id="tyV-Zf-nQd"/>
@@ -282,30 +299,6 @@
             <point key="canvasLocation" x="-366" y="248"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onLabeledButtonClicked:"/>
-                <relationship kind="action" name="someButtonClick:"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="labeledButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="labeledLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="placeholderTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="selectedItemLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="textButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

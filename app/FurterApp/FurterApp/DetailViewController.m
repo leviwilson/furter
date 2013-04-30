@@ -85,6 +85,9 @@
 - (IBAction)someButtonClick:(id)sender {
     [self.labelTextField setText:@"The button was clicked!"];
 }
+
+- (IBAction)goToPaging:(id)sender {
+}
 - (IBAction)onLabeledButtonClicked:(id)sender {
     [self.labelTextField setText:@"The labeled button was clicked!"];
 }
