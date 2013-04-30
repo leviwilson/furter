@@ -14,7 +14,16 @@
 @end
 
 @implementation DetailViewController
-@synthesize slider; 
+@synthesize slider;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        detaiItems = [[NSArray alloc] initWithObjects:@"First Item", @"Second Item", @"Third Item", nil]; 
+    }
+    return self;
+}
 
 #pragma mark - Managing the detail item
 
@@ -79,4 +88,22 @@
 - (IBAction)onLabeledButtonClicked:(id)sender {
     [self.labelTextField setText:@"The labeled button was clicked!"];
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [detaiItems count]; 
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1; 
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+#warning start here for tableview implmentation. 
+    
+}
+
+
 @end
