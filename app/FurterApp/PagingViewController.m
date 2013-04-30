@@ -28,8 +28,6 @@
 {
     [super viewDidLoad];
     
-  
-    
     NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
     for (int i = 0; i < 3; i++) {
         CGRect frame;
@@ -37,14 +35,11 @@
         frame.origin.y = 0;
         frame.size = self.scrollView.frame.size;
         
-//        UIView *subview = [[UIView alloc] initWithFrame:frame];
+        UIView *subview = [[UIView alloc] initWithFrame:frame];
+        [subview setAccessibilityLabel:[NSString stringWithFormat:@"Subview:%@", [UIColor description]]];
+
         
-        UITextField *field = [[UITextField alloc] initWithFrame:frame];
-        [field setText:[NSString stringWithFormat:@"This is page:%d", i]];
-        [field setAccessibilityLabel:[NSString stringWithFormat:@"TextField:%d", i]]; 
-        
-        field.backgroundColor = [colors objectAtIndex:i];
-        [scrollView addSubview:field];
+        [scrollView addSubview:subview];
         
         
     }
