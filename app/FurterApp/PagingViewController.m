@@ -36,10 +36,15 @@
         frame.size = self.scrollView.frame.size;
         
         UIView *subview = [[UIView alloc] initWithFrame:frame];
+        UILabel *label = [[UILabel alloc] initWithFrame:frame];
+        [label setText:[NSString stringWithFormat:@"Label:%d",i]];
+        [label setAccessibilityLabel:[NSString stringWithFormat:@"TextField:%d",i]];
+        [subview setBackgroundColor:[colors objectAtIndex:i]];
         [subview setAccessibilityLabel:[NSString stringWithFormat:@"Subview:%@", [UIColor description]]];
 
         
         [scrollView addSubview:subview];
+        [scrollView addSubview:label]; 
         
         
     }

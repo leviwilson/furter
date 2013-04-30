@@ -21,7 +21,7 @@
     self = [super init];
     if (self) {
         detaiItems = [[NSArray alloc] initWithObjects:@"First Item", @"Second Item", @"Third Item", nil];
-        [pagingButton setAccessibilityLabel:@"PagingButton"]; 
+
     }
     return self;
 }
@@ -58,7 +58,8 @@
     [self configureView];
     [self.labeledButton setAccessibilityLabel:@"labeledButtonId"];
     [self.labeledLabel setAccessibilityLabel:@"labelByAccessibilityLabel"];
-    [slider setAccessibilityLabel:@"sliderByLabel"]; 
+    [slider setAccessibilityLabel:@"sliderByLabel"];
+    [pagingButton setAccessibilityLabel:@"PagingButton"]; 
 }
 
 - (void)didReceiveMemoryWarning
