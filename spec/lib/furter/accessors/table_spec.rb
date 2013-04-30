@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Furter::Accessors::Table do
 
   let(:table) { Furter::Accessors::Table.new(:label => 'tableView') }
-  let(:selector) { slider.send(:selector) }
+  let(:selector) { table.send(:selector) }
 
   context 'locating table' do
     it 'can be found by id' do

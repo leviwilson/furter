@@ -11,6 +11,7 @@ require 'furter/accessors/table_item'
 require 'furter/accessors/text'
 require 'furter/accessors/label'
 require 'furter/accessors/slider'
+require 'furter/accessors/scroll_view'
 
 module Furter
   include Frank::Cucumber::FrankHelper
