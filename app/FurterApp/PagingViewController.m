@@ -13,6 +13,7 @@
 @end
 
 @implementation PagingViewController
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +27,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [super viewDidLoad];
+    
+    NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
+    for (int i = 0; i < colors.count; i++) {
+        CGRect frame;
+        frame.origin.x = self.scrollView.frame.size.width * i;
+        frame.origin.y = 0;
+        frame.size = self.scrollView.frame.size;
+        
+        UIView *subview = [[UIView alloc] initWithFrame:frame];
+        subview.backgroundColor = [colors objectAtIndex:i];
+        [scrollView addSubview:subview]; 
+        
+        
+    }
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * colors.count, self.scrollView.frame.size.height);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

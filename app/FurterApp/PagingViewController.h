@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PagingViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
