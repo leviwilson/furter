@@ -33,6 +33,15 @@ module Furter
       end
     end
 
+    def scroll_view(name, locator)
+      define_method("#{name}_view") do
+        Furter::Accessors::ScrollView.new(locator)
+      end
+      define_method("#{name}_scroll") do |x,y|
+        Furter::Accessors::ScrollView.new(locator).scroll(x, y)
+      end
+    end
+
     def button(name, locator)
       define_method("#{name}") do
         Furter::Accessors::Button.new(locator).click

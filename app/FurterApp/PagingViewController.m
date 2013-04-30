@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [scrollView setAccessibilityLabel:@"scrollView"]; 
     }
     return self;
 }
@@ -28,18 +28,23 @@
 {
     [super viewDidLoad];
     
-    [super viewDidLoad];
+  
     
     NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
-    for (int i = 0; i < colors.count; i++) {
+    for (int i = 0; i < 3; i++) {
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
         frame.size = self.scrollView.frame.size;
         
-        UIView *subview = [[UIView alloc] initWithFrame:frame];
-        subview.backgroundColor = [colors objectAtIndex:i];
-        [scrollView addSubview:subview]; 
+//        UIView *subview = [[UIView alloc] initWithFrame:frame];
+        
+        UITextField *field = [[UITextField alloc] initWithFrame:frame];
+        [field setText:[NSString stringWithFormat:@"This is page:%d", i]];
+        [field setAccessibilityLabel:[NSString stringWithFormat:@"TextField:%d", i]]; 
+        
+        field.backgroundColor = [colors objectAtIndex:i];
+        [scrollView addSubview:field];
         
         
     }

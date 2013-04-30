@@ -14,13 +14,14 @@
 @end
 
 @implementation DetailViewController
-@synthesize slider;
+@synthesize slider, pagingButton;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        detaiItems = [[NSArray alloc] initWithObjects:@"First Item", @"Second Item", @"Third Item", nil]; 
+        detaiItems = [[NSArray alloc] initWithObjects:@"First Item", @"Second Item", @"Third Item", nil];
+        [pagingButton setAccessibilityLabel:@"PagingButton"]; 
     }
     return self;
 }
