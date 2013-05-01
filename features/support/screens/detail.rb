@@ -17,4 +17,6 @@ class DetailPage
   slider(:slider_label, :label=> 'sliderByLabel')
 
   views('DetailViewController')
+
+  button(:button_paging, :label => 'PagingButton')
 end
