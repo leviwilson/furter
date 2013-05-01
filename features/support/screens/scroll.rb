@@ -4,8 +4,8 @@ class ScrollPage
   views('PagingViewController')
   scroll_view(:scroll_page, :label => 'scrollView')
 
-  text(:text_first, :label => 'TextField:0')
-  text(:text_second, :label => 'TextField:1')
-  text(:text_third, :label => 'TextField:2')
+  label(:label_first, :label => 'TextField:0')
+  label(:label_second, :label => 'TextField:1')
+  label(:label_third, :label => 'TextField:2')
 
 end

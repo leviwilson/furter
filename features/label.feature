@@ -4,7 +4,7 @@ Feature: Working with label controls
     Then I know that the label identified by "id" is "Detail view content goes here"
 
   Scenario: Accessing the raw view properties of a label
-    Then the label identified by "id" should be "visible"
+    Then the label on the "DetailPage" identified by "id" should be "visible"
 
   Scenario: Finding labels by their text
-    Then the label identified by "text" should be "visible"
+    Then the label on the "DetailPage" identified by "text" should be "visible"
