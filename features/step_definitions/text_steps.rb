@@ -3,6 +3,7 @@ When(/^I set the text identified by "(.*?)" to "(.*?)"$/) do |how, text|
 end
 
 Then(/^the text on the "(.*?)" identified by "(.*?)" should be "(.*?)"$/) do |page,how, text|
+ sleep(4)
   on(page.to_class).send("text_#{how}").should eq(text)
 end
 

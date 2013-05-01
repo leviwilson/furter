@@ -35,23 +35,15 @@
         frame.origin.y = 0;
         frame.size = self.scrollView.frame.size;
         
-        UIView *subview = [[UIView alloc] initWithFrame:frame];
         UILabel *label = [[UILabel alloc] initWithFrame:frame];
         [label setText:[NSString stringWithFormat:@"Label:%d",i]];
         [label setAccessibilityLabel:[NSString stringWithFormat:@"TextField:%d",i]];
-        [subview setBackgroundColor:[colors objectAtIndex:i]];
-        [subview setAccessibilityLabel:[NSString stringWithFormat:@"Subview:%@", [UIColor description]]];
-
+        [label setBackgroundColor:[colors objectAtIndex:i]]; 
         
-        [scrollView addSubview:subview];
-        [scrollView addSubview:label]; 
-        
-        
+        [scrollView addSubview:label];
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * colors.count, self.scrollView.frame.size.height);
-    
-    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning

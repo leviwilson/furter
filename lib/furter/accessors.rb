@@ -2,6 +2,8 @@ module Furter
   module Accessors
     def text(name, locator)
       define_method("#{name}") do
+        p name
+        p Furter::Accessors::Text.new(locator).get_text
         Furter::Accessors::Text.new(locator).get_text
       end
       define_method("#{name}_editable?") do
