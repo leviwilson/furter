@@ -1,5 +1,6 @@
 language: objective-c
 rvm: 1.9.3
+env:  USE_SIM_LAUNCHER_SERVER=true
 script:
   - rake sim_server
   - rake test
