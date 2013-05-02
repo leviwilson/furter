@@ -28,8 +28,3 @@ task :build_app do
     `frank build`
   end
 end
-
-desc "Launch the sim_launcher"
-task :sim_server do
-  IO.popen 'sim_launcher'
-end
