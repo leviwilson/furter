@@ -19,6 +19,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'frank-cucumber', '~> 1.1.8'
   gem.add_dependency 'page_navigation', '>= 0.7'
+  gem.add_dependency 'sim_launcher'
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rake'

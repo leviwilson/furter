@@ -28,3 +28,9 @@ task :build_app do
     `frank build`
   end
 end
+
+desc "Launch the sim_launcher"
+task :sim_server do
+  ENV['USE_SIM_LAUNCHER_SERVER'] = 'true'
+  IO.popen 'sim_launcher'
+end
