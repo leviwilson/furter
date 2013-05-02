@@ -1,4 +1,5 @@
 # Furter
+[![Build Status](https://travis-ci.org/leviwilson/furter.png)](https://travis-ci.org/leviwilson/furter)
 
 A gem to assist in building page-object like structures for testing iOS applications.  `furter` uses [`frank-cucumber`](http://testingwithfrank.com/) to automate iOS applications using page-objects.
 
