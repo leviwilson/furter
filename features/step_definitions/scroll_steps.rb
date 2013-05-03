@@ -1,3 +1,3 @@
-When /^I move the scrollview identified by "([^"]*)" "([^"]*)" pixels left$/ do |which, distance|
-  on(ScrollPage).send("scroll_#{which}_scroll", "#{distance}", "0")
+When(/^I swipe the scrollview identified by the label "([^"]*)" in the "([^"]*)" direction$/) do |which, direction|
+  frankly_map("view:'UIScrollView' marked:'#{which}'", 'swipeInDirection:', "#{direction}")
 end

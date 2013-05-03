@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [scrollView setAccessibilityLabel:@"scrollView"]; 
+
     }
     return self;
 }
@@ -38,6 +38,7 @@
         UILabel *label = [[UILabel alloc] initWithFrame:frame];
         [label setText:[NSString stringWithFormat:@"Label:%d",i]];
         [label setAccessibilityLabel:[NSString stringWithFormat:@"TextField:%d",i]];
+        [scrollView setAccessibilityLabel:@"scrollView"]; 
         [label setBackgroundColor:[colors objectAtIndex:i]]; 
         
         [scrollView addSubview:label];
@@ -45,6 +46,9 @@
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
