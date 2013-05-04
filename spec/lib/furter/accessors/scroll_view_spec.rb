@@ -13,9 +13,9 @@ describe Furter::Accessors::ScrollView do
   end
 
   context 'scrolling views' do
-    it ' can scroll by x and y pixels' do
-      scroll_view.should_receive(:scroll_view_to_position).with("view:'UIScrollView' marked:'scrollView'", "1","1")
-      scroll_view.scroll(1,1)
+    it ' can scroll a view' do
+      scroll_view.should_receive(:frankly_map).with("view:'UIScrollView' marked:'scrollView'", 'swipeInDirection:', 'left')
+      scroll_view.scroll('left')
     end
   end
 

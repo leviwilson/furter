@@ -39,7 +39,9 @@
         [label setText:[NSString stringWithFormat:@"Label:%d",i]];
         [label setAccessibilityLabel:[NSString stringWithFormat:@"TextField:%d",i]];
         [scrollView setAccessibilityLabel:@"scrollView"]; 
-        [label setBackgroundColor:[colors objectAtIndex:i]]; 
+        [label setBackgroundColor:[colors objectAtIndex:i]];
+        
+        
         
         [scrollView addSubview:label];
     }

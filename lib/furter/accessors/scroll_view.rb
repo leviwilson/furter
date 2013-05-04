@@ -2,8 +2,8 @@ module Furter
   module Accessors
     class ScrollView < View
 
-    def scroll(x,y)
-      scroll_view_to_position("#{selector}", x.to_s, y.to_s)
+    def scroll(direction)
+      frankly_map("#{selector}", 'swipeInDirection:',  direction)
     end
 
     def view_class

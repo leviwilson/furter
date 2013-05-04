@@ -39,8 +39,8 @@ module Furter
       define_method("#{name}_view") do
         Furter::Accessors::ScrollView.new(locator)
       end
-      define_method("#{name}_scroll") do |x,y|
-        Furter::Accessors::ScrollView.new(locator).scroll(x, y)
+      define_method("#{name}_scroll") do |direction|
+        Furter::Accessors::ScrollView.new(locator).scroll(direction)
       end
     end
 
