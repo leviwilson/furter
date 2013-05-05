@@ -19,9 +19,16 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        tableData = [[NSArray alloc] initWithObjects:@"First element", @"Second element", @"Third element", @"Fourth element", nil]; 
+        tableData = [[NSArray alloc] initWithObjects:@"First element", @"Second element", @"Third element", @"Fourth element", nil];
     }
     return self;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [selectedLabel setAccessibilityLabel:@"selectedLabel"];
+    [testTableView setAccessibilityLabel:@"testTableView"]; 
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

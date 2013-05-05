@@ -15,7 +15,7 @@
 @end
 
 @implementation DetailViewController
-@synthesize slider, pagingButton, selectedItemLabel;
+@synthesize slider, pagingButton, selectedItemLabel,tablesButton;
 
 - (id)init
 {
@@ -60,6 +60,7 @@
     [self.labeledLabel setAccessibilityLabel:@"labelByAccessibilityLabel"];
     [slider setAccessibilityLabel:@"sliderByLabel"];
     [pagingButton setAccessibilityLabel:@"PagingButton"];
+    [tablesButton setAccessibilityLabel:@"TablesButton"]; 
     
 }
 

@@ -13,6 +13,7 @@
     NSArray *detaiItems;
 }
 @property (weak, nonatomic) IBOutlet UIButton *pagingButton;
+@property (weak, nonatomic) IBOutlet UIButton *tablesButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *placeholderTextField;
 @property (weak, nonatomic) IBOutlet UITextField *labelTextField;
@@ -25,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *selectedItemLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UIButton *tablesButton;
+
 
 - (IBAction)onLabeledButtonClicked:(id)sender;
 - (IBAction)someButtonClick:(id)sender;
