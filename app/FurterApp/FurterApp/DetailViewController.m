@@ -8,21 +8,21 @@
 
 #import "DetailViewController.h"
 #import "PagingViewController.h"
+#import "TablesViewController.h"
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
 @implementation DetailViewController
-@synthesize slider, pagingButton;
+@synthesize slider, pagingButton, selectedItemLabel;
 
 - (id)init
 {
     self = [super init];
     if (self) {
         detaiItems = [[NSArray alloc] initWithObjects:@"First Item", @"Second Item", @"Third Item", nil];
-
-    }
+}
     return self;
 }
 
@@ -59,7 +59,8 @@
     [self.labeledButton setAccessibilityLabel:@"labeledButtonId"];
     [self.labeledLabel setAccessibilityLabel:@"labelByAccessibilityLabel"];
     [slider setAccessibilityLabel:@"sliderByLabel"];
-    [pagingButton setAccessibilityLabel:@"PagingButton"]; 
+    [pagingButton setAccessibilityLabel:@"PagingButton"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,25 +94,14 @@
     PagingViewController *pagingViewController = [[PagingViewController alloc] init];
     [[self navigationController] pushViewController:pagingViewController animated:YES];
 }
+
+- (IBAction)goToTables:(id)sender
+{
+    TablesViewController *tablesViewController = [[TablesViewController alloc] init];
+    [[self navigationController] pushViewController:tablesViewController animated:YES]; 
+}
 - (IBAction)onLabeledButtonClicked:(id)sender {
     [self.labelTextField setText:@"The labeled button was clicked!"];
 }
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [detaiItems count]; 
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1; 
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-#warning start here for tableview implmentation. 
-    
-}
-
 
 @end

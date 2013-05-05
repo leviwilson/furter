@@ -24,6 +24,8 @@
 		124F2AA516FAAADC00865092 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124F2AA416FAAADC00865092 /* DetailViewController.m */; };
 		B8EDCD55173044B40027C7EE /* PagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDCD53173044B30027C7EE /* PagingViewController.m */; };
 		B8EDCD56173044B40027C7EE /* PagingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8EDCD54173044B40027C7EE /* PagingViewController.xib */; };
+		B8FF7B621736975A006BF995 /* TablesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FF7B601736975A006BF995 /* TablesViewController.m */; };
+		B8FF7B631736975A006BF995 /* TablesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8FF7B611736975A006BF995 /* TablesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,9 @@
 		B8EDCD52173044B30027C7EE /* PagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagingViewController.h; path = ../PagingViewController.h; sourceTree = "<group>"; };
 		B8EDCD53173044B30027C7EE /* PagingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagingViewController.m; path = ../PagingViewController.m; sourceTree = "<group>"; };
 		B8EDCD54173044B40027C7EE /* PagingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PagingViewController.xib; path = ../PagingViewController.xib; sourceTree = "<group>"; };
+		B8FF7B5F1736975A006BF995 /* TablesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablesViewController.h; sourceTree = "<group>"; };
+		B8FF7B601736975A006BF995 /* TablesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablesViewController.m; sourceTree = "<group>"; };
+		B8FF7B611736975A006BF995 /* TablesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TablesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,9 @@
 		124F2A8516FAAADC00865092 /* FurterApp */ = {
 			isa = PBXGroup;
 			children = (
+				B8FF7B5F1736975A006BF995 /* TablesViewController.h */,
+				B8FF7B601736975A006BF995 /* TablesViewController.m */,
+				B8FF7B611736975A006BF995 /* TablesViewController.xib */,
 				B8EDCD52173044B30027C7EE /* PagingViewController.h */,
 				B8EDCD53173044B30027C7EE /* PagingViewController.m */,
 				B8EDCD54173044B40027C7EE /* PagingViewController.xib */,
@@ -188,6 +196,7 @@
 				124F2A9916FAAADC00865092 /* MainStoryboard_iPhone.storyboard in Resources */,
 				124F2A9C16FAAADC00865092 /* MainStoryboard_iPad.storyboard in Resources */,
 				B8EDCD56173044B40027C7EE /* PagingViewController.xib in Resources */,
+				B8FF7B631736975A006BF995 /* TablesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +213,7 @@
 				124F2AA216FAAADC00865092 /* MasterViewController.m in Sources */,
 				124F2AA516FAAADC00865092 /* DetailViewController.m in Sources */,
 				B8EDCD55173044B40027C7EE /* PagingViewController.m in Sources */,
+				B8FF7B621736975A006BF995 /* TablesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
