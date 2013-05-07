@@ -22,15 +22,15 @@ describe Furter::Accessors::Table do
   context 'getting table data' do
     it 'can get total number of rows in table with one section' do
       table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfSections').and_return([1])
-      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', '1').and_return(5)
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', 0).and_return([5])
       table.row_count.should == 5
     end
 
     it 'can get total number of rows in table with many sections' do
       table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfSections').and_return([3])
-      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', '1').and_return(5)
-      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', '2').and_return(3)
-      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', '3').and_return(2)
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', 0).and_return([5])
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', 1).and_return([3])
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', 2).and_return([2])
       table.row_count.should == 10
     end
   end
