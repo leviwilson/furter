@@ -6,4 +6,7 @@ Feature: Working with table view
     
     Scenario: Selecting a table row by index
       When I click in the "0" index of the table identified by "elements"
-      Then the text on the "TablesPage" identified by "selected" should be "Fourth element"
+      Then I know that the label on the "TablesPage" identified by "selected" is "Fourth element"
+
+    Scenario: Getting number of rows in table with one section
+      Then I know the table on the "TablesPage" identified by "elements" has "4" rows

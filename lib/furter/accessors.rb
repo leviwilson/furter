@@ -70,6 +70,9 @@ module Furter
       define_method("#{name}_select_index") do |index|
         Furter::Accessors::Table.new(locator).item_at index
       end
+      define_method("#{name}_rows") do
+       Furter::Accessors::Table.new(locator).row_count
+      end
     end
 
     def table_item(name, locator)
