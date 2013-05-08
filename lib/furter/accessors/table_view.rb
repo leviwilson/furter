@@ -14,13 +14,13 @@ module Furter
         current_section = 0
         rows = 0
         until current_section > sections
-          rows = rows + count_section(current_section)
+          rows = rows + rows_in(current_section)
           current_section += 1
         end
         rows
       end
 
-      def count_section(section)
+      def rows_in(section)
         frankly_map("#{selector}", 'numberOfRowsInSection:', section)[0]
       end
 

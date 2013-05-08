@@ -76,8 +76,8 @@ module Furter
       define_method("#{name}_sections") do
         Furter::Accessors::Table.new(locator).section_count
       end
-      define_method("#{name}_section_rows") do |section|
-        Furter::Accessors::Table.new(locator).count_section section
+      define_method("#{name}_rows_in") do |section|
+        Furter::Accessors::Table.new(locator).rows_in section
       end
     end
 

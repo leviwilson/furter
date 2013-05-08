@@ -36,7 +36,7 @@ describe Furter::Accessors::Table do
 
     it 'can get the row count for any section in the table' do
       table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', 2).and_return([5])
-      table.count_section(2).should == 5
+      table.rows_in(2).should == 5
     end
 
     it 'can get the number of sections in the table' do
