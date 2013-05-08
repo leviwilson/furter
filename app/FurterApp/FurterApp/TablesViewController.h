@@ -10,9 +10,13 @@
 
 @interface TablesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 {
-    NSArray *tableData; 
+    NSArray *tableData;
+    NSArray *firstSectionData;
+    NSArray *secondSectionData; 
 }
 @property (weak, nonatomic) IBOutlet UILabel *selectedLabel;
 @property (weak, nonatomic) IBOutlet UITableView *testTableView;
+
+@property (weak, nonatomic) IBOutlet UITableView *multipleSectionsTable;
 
 @end
