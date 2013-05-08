@@ -21,7 +21,7 @@
     if (self) {
         tableData = [[NSArray alloc] initWithObjects:@"First element", @"Second element", @"Third element", @"Fourth element", nil];
         firstSectionData = [[NSArray alloc] initWithObjects:@"FirstSectionFirstElement", @"FirstSectionSecondElement", @"FirstSectionThirdElement", nil];
-        secondSectionData = [[NSArray alloc] initWithObjects:@"SecondSectionFirstElement", @"SecondSectionSecondElement", @"SecondSectionThirdElement", nil];
+        secondSectionData = [[NSArray alloc] initWithObjects:@"SecondSectionFirstElement", @"SecondSectionSecondElement", @"SecondSectionThirdElement", @"SecondSectionFourthElement", nil];
         
     }
     return self;

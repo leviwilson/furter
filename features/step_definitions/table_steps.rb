@@ -8,5 +8,5 @@ Given(/^I have a table identified by "([^"]*)" with "([^"]*)" sections$/) do |la
    on(TablesPage).send("table_#{label}_sections").should == sections.to_i
 end
 When(/^the section "([^"]*)" on the table identified by "([^"]*)" has "([^"]*)" rows$/) do |section, label, rows|
-  on(TablesPage).send("table_#{label}_section_rows", section).should == rows.to_i
+  on(TablesPage).send("table_#{label}_section_rows", section.to_i).should == rows.to_i
 end
