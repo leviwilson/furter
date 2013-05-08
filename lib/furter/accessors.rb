@@ -67,8 +67,8 @@ module Furter
       define_method("#{name}_view") do
         Furter::Accessors::Table.new(locator)
       end
-      define_method("#{name}_select_index") do |index|
-        Furter::Accessors::Table.new(locator).item_at index
+      define_method("#{name}_touch_index") do |index|
+        Furter::Accessors::Table.new(locator).touch_index index
       end
       define_method("#{name}_rows") do
        Furter::Accessors::Table.new(locator).row_count

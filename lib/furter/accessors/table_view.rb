@@ -5,7 +5,7 @@ module Furter
         frankly_map("#{selector} label", "text").compact.map(&:strip).reject(&:empty?)
       end
 
-      def item_at(index)
+      def touch_index(index)
         touch("#{selector} tableViewCell index:#{index}")
       end
 

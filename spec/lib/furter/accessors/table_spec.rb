@@ -15,7 +15,7 @@ describe Furter::Accessors::Table do
   context 'selecting table items' do
     it 'can select an item by index' do
       table.should_receive(:touch).with("view:'UITableView' marked:'tableView' tableViewCell index:0")
-      table.item_at(0)
+      table.touch_index(0)
     end
   end
 
