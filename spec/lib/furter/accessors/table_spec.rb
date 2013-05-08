@@ -38,6 +38,11 @@ describe Furter::Accessors::Table do
       table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfRowsInSection:', 2).and_return([5])
       table.count_section(2).should == 5
     end
+
+    it 'can get the number of sections in the table' do
+      table.should_receive(:frankly_map).with("view:'UITableView' marked:'tableView'", 'numberOfSections').and_return([5])
+      table.section_count.should == 5
+    end
   end
 
 end

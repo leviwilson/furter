@@ -10,7 +10,7 @@ module Furter
       end
 
       def row_count
-        sections = frankly_map("#{selector}", 'numberOfSections')[0] - 1
+        sections = section_count - 1
         current_section = 0
         rows = 0
         until current_section > sections
@@ -22,6 +22,10 @@ module Furter
 
       def count_section(section)
         frankly_map("#{selector}", 'numberOfRowsInSection:', section)[0]
+      end
+
+      def section_count
+        frankly_map("#{selector}", 'numberOfSections')[0]
       end
 
       private
