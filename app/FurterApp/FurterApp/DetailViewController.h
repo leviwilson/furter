@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
-- (IBAction)someButtonClick:(id)sender;
+@interface DetailViewController : UIViewController <UISplitViewControllerDelegate,UITableViewDelegate,UITableViewDataSource>
+{
+    NSArray *detaiItems;
+}
+@property (weak, nonatomic) IBOutlet UIButton *pagingButton;
+@property (weak, nonatomic) IBOutlet UIButton *tablesButton;
+
 @property (weak, nonatomic) IBOutlet UITextField *placeholderTextField;
 @property (weak, nonatomic) IBOutlet UITextField *labelTextField;
 @property (weak, nonatomic) IBOutlet UIButton *textButton;
@@ -18,7 +23,14 @@
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @property (strong, nonatomic) id detailItem;
+@property (weak, nonatomic) IBOutlet UILabel *selectedItemLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
 
 - (IBAction)onLabeledButtonClicked:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+- (IBAction)someButtonClick:(id)sender;
+- (IBAction)goToPaging:(id)sender;
+- (IBAction)goToTables:(id)sender;
+
 @end

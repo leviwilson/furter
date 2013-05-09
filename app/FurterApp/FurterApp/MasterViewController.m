@@ -16,6 +16,16 @@
 
 @implementation MasterViewController
 
+-(id)init
+{
+    self = [super init];
+    if (self) {
+        [[self tableView] setAccessibilityLabel:@"masterTableView"];
+    }
+    return self;
+    
+}
+
 - (void)awakeFromNib
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -32,6 +42,7 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    [addButton setAccessibilityLabel:@"addButton"];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }

@@ -7,14 +7,24 @@
 //
 
 #import "DetailViewController.h"
-
+#import "PagingViewController.h"
+#import "TablesViewController.h"
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @end
 
 @implementation DetailViewController
-@synthesize slider; 
+@synthesize slider, pagingButton, selectedItemLabel,tablesButton;
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        detaiItems = [[NSArray alloc] initWithObjects:@"First Item", @"Second Item", @"Third Item", nil];
+}
+    return self;
+}
 
 #pragma mark - Managing the detail item
 
@@ -48,7 +58,10 @@
     [self configureView];
     [self.labeledButton setAccessibilityLabel:@"labeledButtonId"];
     [self.labeledLabel setAccessibilityLabel:@"labelByAccessibilityLabel"];
-    [slider setAccessibilityLabel:@"sliderByLabel"]; 
+    [slider setAccessibilityLabel:@"sliderByLabel"];
+    [pagingButton setAccessibilityLabel:@"PagingButton"];
+    [tablesButton setAccessibilityLabel:@"TablesButton"]; 
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +89,20 @@
 - (IBAction)someButtonClick:(id)sender {
     [self.labelTextField setText:@"The button was clicked!"];
 }
+
+- (IBAction)goToPaging:(id)sender
+{
+    PagingViewController *pagingViewController = [[PagingViewController alloc] init];
+    [[self navigationController] pushViewController:pagingViewController animated:YES];
+}
+
+- (IBAction)goToTables:(id)sender
+{
+    TablesViewController *tablesViewController = [[TablesViewController alloc] init];
+    [[self navigationController] pushViewController:tablesViewController animated:YES]; 
+}
 - (IBAction)onLabeledButtonClicked:(id)sender {
     [self.labelTextField setText:@"The labeled button was clicked!"];
 }
+
 @end

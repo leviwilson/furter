@@ -10,10 +10,13 @@ class DetailPage
   button(:button_text, :text => 'Some Button')
   button(:button_label, :label => 'labeledButtonId')
   button(:go_elsewhere, :text => 'Go Elsewhere')
+  button(:button_paging, :label => 'PagingButton')
+  button(:button_tables, :label => 'TablesButton')
 
   switch(:switch_toggle, :label => 'switchToggle')
 
   slider(:slider_label, :label=> 'sliderByLabel')
 
   views('DetailViewController')
+
 end

@@ -2,8 +2,9 @@ When(/^I set the text identified by "(.*?)" to "(.*?)"$/) do |how, text|
   on(DetailPage).send("text_#{how}=", text)
 end
 
-Then(/^the text identified by "(.*?)" should be "(.*?)"$/) do |how, text|
-  on(DetailPage).send("text_#{how}").should eq(text)
+Then(/^the text on the "(.*?)" identified by "(.*?)" should be "(.*?)"$/) do |page,how, text|
+ sleep(4)
+  on(page.to_class).send("text_#{how}").should eq(text)
 end
 
 Then(/^we know if a text field is both editable and not editable$/) do

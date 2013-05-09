@@ -33,6 +33,15 @@ module Furter
       end
     end
 
+    def scroll_view(name, locator)
+      define_method("#{name}_view") do
+        Furter::Accessors::ScrollView.new(locator)
+      end
+      define_method("#{name}_scroll") do |direction|
+        Furter::Accessors::ScrollView.new(locator).scroll(direction)
+      end
+    end
+
     def button(name, locator)
       define_method("#{name}") do
         Furter::Accessors::Button.new(locator).click
@@ -57,6 +66,18 @@ module Furter
       end
       define_method("#{name}_view") do
         Furter::Accessors::Table.new(locator)
+      end
+      define_method("#{name}_touch_index") do |index|
+        Furter::Accessors::Table.new(locator).touch_index index
+      end
+      define_method("#{name}_rows") do
+       Furter::Accessors::Table.new(locator).row_count
+      end
+      define_method("#{name}_sections") do
+        Furter::Accessors::Table.new(locator).section_count
+      end
+      define_method("#{name}_rows_in") do |section|
+        Furter::Accessors::Table.new(locator).rows_in section
       end
     end
 

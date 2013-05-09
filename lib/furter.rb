@@ -6,11 +6,12 @@ require 'furter/accessors/alert_button'
 require 'furter/accessors/button'
 require 'furter/accessors/map_pin'
 require 'furter/accessors/switch'
-require 'furter/accessors/table'
+require 'furter/accessors/table_view'
 require 'furter/accessors/table_item'
 require 'furter/accessors/text'
 require 'furter/accessors/label'
 require 'furter/accessors/slider'
+require 'furter/accessors/scroll_view'
 
 module Furter
   include Frank::Cucumber::FrankHelper

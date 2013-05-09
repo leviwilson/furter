@@ -30,6 +30,10 @@
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" label="labelByAccessibilityLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Pw7-XS-G27"/>
+                                    <constraint firstAttribute="height" constant="30" id="jUH-D7-O0X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -113,34 +117,65 @@
                                     <constraint firstAttribute="width" constant="288" id="dCS-tQ-uoe"/>
                                 </constraints>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lL-pl-1Xz">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Paging">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToPaging:" destination="4" eventType="touchUpInside" id="Mh2-Xa-DLG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m6-Kw-ttR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Tables">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToTables:" destination="4" eventType="touchUpInside" id="03b-wk-gOz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="leading" secondItem="mEd-bW-xG3" secondAttribute="leading" type="default" id="078-hV-XP8"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1JC-Aj-NzB"/>
                             <constraint firstItem="n4M-Kb-ePv" firstAttribute="top" secondItem="6Hu-uu-EUY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9II-fH-f7K"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CON-Cb-dBe"/>
+                            <constraint firstItem="9lL-pl-1Xz" firstAttribute="trailing" secondItem="n4M-Kb-ePv" secondAttribute="trailing" type="default" id="Bif-vT-e8y"/>
+                            <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="27" id="FKl-eY-kMA"/>
                             <constraint firstAttribute="trailing" secondItem="Nyi-ck-8hR" secondAttribute="trailing" constant="227" id="G0P-fu-R9M"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="leading" secondItem="MgB-Y1-P3J" secondAttribute="leading" type="default" id="GwV-n1-zD7"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="top" secondItem="mEd-bW-xG3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IGG-em-f1e"/>
+                            <constraint firstItem="5m6-Kw-ttR" firstAttribute="trailing" secondItem="9lL-pl-1Xz" secondAttribute="trailing" type="default" id="JLF-z1-df6"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="top" secondItem="26" secondAttribute="top" constant="19" id="KGI-gf-TAe"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="LAk-gc-aCl"/>
+                            <constraint firstItem="wB4-9F-vl7" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="47" id="Kls-XA-XdB"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="baseline" secondItem="HNa-e4-2od" secondAttribute="baseline" type="default" id="M5i-yy-h0N"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="top" secondItem="MgB-Y1-P3J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MWf-xM-HxM"/>
                             <constraint firstItem="nbu-fr-Znd" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RZE-cI-a2V"/>
                             <constraint firstItem="MgB-Y1-P3J" firstAttribute="leading" secondItem="HNa-e4-2od" secondAttribute="leading" type="default" id="TI6-aB-T6l"/>
                             <constraint firstItem="6Hu-uu-EUY" firstAttribute="trailing" secondItem="MgB-Y1-P3J" secondAttribute="trailing" type="default" id="Tkv-gE-Bb0"/>
+                            <constraint firstItem="wB4-9F-vl7" firstAttribute="top" secondItem="27" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tsf-I3-gC2"/>
+                            <constraint firstItem="5m6-Kw-ttR" firstAttribute="leading" secondItem="9lL-pl-1Xz" secondAttribute="leading" type="default" id="Ucp-GD-vrs"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="top" secondItem="26" secondAttribute="top" constant="23" id="WAb-82-oiE"/>
-                            <constraint firstAttribute="bottom" secondItem="wB4-9F-vl7" secondAttribute="bottom" constant="250" id="bJ6-kP-IlL"/>
                             <constraint firstItem="HNa-e4-2od" firstAttribute="trailing" secondItem="mEd-bW-xG3" secondAttribute="trailing" type="default" id="e4T-wS-zIa"/>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="26" secondAttribute="centerY" type="default" id="fbb-bQ-YI1"/>
-                            <constraint firstItem="MgB-Y1-P3J" firstAttribute="top" secondItem="26" secondAttribute="top" constant="120" id="fxO-Da-wfr"/>
                             <constraint firstItem="n4M-Kb-ePv" firstAttribute="leading" secondItem="6Hu-uu-EUY" secondAttribute="leading" type="default" id="gQf-GL-AtC"/>
+                            <constraint firstItem="5m6-Kw-ttR" firstAttribute="top" secondItem="9lL-pl-1Xz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="je3-Qp-oeO"/>
+                            <constraint firstItem="MgB-Y1-P3J" firstAttribute="top" secondItem="26" secondAttribute="top" constant="120" id="jvT-IO-xcS"/>
                             <constraint firstItem="mEd-bW-xG3" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="163" id="kHo-k9-xfB"/>
                             <constraint firstItem="n4M-Kb-ePv" firstAttribute="trailing" secondItem="6Hu-uu-EUY" secondAttribute="trailing" type="default" id="kXJ-R6-5W3"/>
+                            <constraint firstItem="9lL-pl-1Xz" firstAttribute="top" secondItem="26" secondAttribute="top" constant="278" id="oYb-MP-o26"/>
                             <constraint firstItem="79f-eU-bDt" firstAttribute="baseline" secondItem="mEd-bW-xG3" secondAttribute="baseline" type="default" id="piK-8v-q9x"/>
+                            <constraint firstItem="9lL-pl-1Xz" firstAttribute="leading" secondItem="n4M-Kb-ePv" secondAttribute="leading" type="default" id="qSc-XT-Mrq"/>
                             <constraint firstItem="Nyi-ck-8hR" firstAttribute="top" secondItem="nbu-fr-Znd" secondAttribute="top" type="default" id="wtS-Ul-nbp"/>
-                            <constraint firstItem="wB4-9F-vl7" firstAttribute="leading" secondItem="26" secondAttribute="leading" constant="206" id="zbX-ES-KTX"/>
+                            <constraint firstItem="27" firstAttribute="top" secondItem="5m6-Kw-ttR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xB6-0W-UcO"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -151,8 +186,10 @@
                         <outlet property="labelTextField" destination="HNa-e4-2od" id="SHv-1W-wQm"/>
                         <outlet property="labeledButton" destination="6Hu-uu-EUY" id="lP4-Wp-TLL"/>
                         <outlet property="labeledLabel" destination="27" id="GUQ-6K-Ygb"/>
+                        <outlet property="pagingButton" destination="9lL-pl-1Xz" id="gyc-3e-VYe"/>
                         <outlet property="placeholderTextField" destination="mEd-bW-xG3" id="WJN-WF-CeJ"/>
                         <outlet property="slider" destination="wB4-9F-vl7" id="tyV-Zf-nQd"/>
+                        <outlet property="tablesButton" destination="5m6-Kw-ttR" id="Hny-5J-KEu"/>
                         <outlet property="textButton" destination="MgB-Y1-P3J" id="dgB-Uo-P2L"/>
                     </connections>
                 </viewController>
@@ -261,6 +298,33 @@
             <point key="canvasLocation" x="-366" y="248"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goToPaging:"/>
+                <relationship kind="action" name="goToTables:"/>
+                <relationship kind="action" name="onLabeledButtonClicked:"/>
+                <relationship kind="action" name="someButtonClick:"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="labeledButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="labeledLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pagingButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="placeholderTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="selectedItemLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="slider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="tablesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
