@@ -19,6 +19,9 @@
 
 @property (strong, nonatomic) id detailItem;
 
+@property (weak, nonatomic) IBOutlet UIButton *tablesButton;
+- (IBAction)showTables:(id)sender;
+
 - (IBAction)onLabeledButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
