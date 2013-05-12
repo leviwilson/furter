@@ -1,5 +1,5 @@
-Then /^I know that the label "([^"]*)" on the  identified by "([^"]*)" is "([^"]*)"$/ do |page, how, what|
-  on(page.class).send("label_#{how}").should eq(what)
+Then /^I know that the label  on the "([^"]*)"  identified by "([^"]*)" is "([^"]*)"$/ do |page, how, what|
+  on(page.to_class).send("label_#{how}").should eq(what)
 end
 
 Then /^the label identified by "([^"]*)" should be "([^"]*)"$/ do |how, property|

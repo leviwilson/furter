@@ -58,6 +58,9 @@ module Furter
       define_method("#{name}_view") do
         Furter::Accessors::Table.new(locator)
       end
+      define_method("#{name}_touch_index") do |index|
+        Furter::Accessors::Table.new(locator).touch_index index
+      end
     end
 
     def table_item(name, locator)

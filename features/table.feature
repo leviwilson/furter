@@ -6,4 +6,4 @@ Feature: Working with table view
 
   Scenario: Selecting a table row by index
     When I click in the "0" index of the table identified by "elements"
-    Then I know that the label "TablesPage" on the  identified by "selected" is "Fourth element"
+    Then I know that the label  on the "TablesPage"  identified by "selected" is "Fourth element"
