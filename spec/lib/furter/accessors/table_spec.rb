@@ -7,8 +7,7 @@ describe Furter::Accessors::Table do
 
   context 'locating table' do
     it 'can be found by id' do
-      tv = Furter::Accessors::Table.new(:label => 'tableLabel')
-      tv.send(:selector).should eq("view:'UITableView' marked:'tableLabel'")
+      table.send(:selector).should eq("view:'UITableView' marked:'tableView'")
     end
   end
 
