@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "TablesViewController.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -76,7 +77,14 @@
 - (IBAction)someButtonClick:(id)sender {
     [self.labelTextField setText:@"The button was clicked!"];
 }
+
 - (IBAction)onLabeledButtonClicked:(id)sender {
     [self.labelTextField setText:@"The labeled button was clicked!"];
+}
+
+-(void)showTables:(id)sender{
+    
+    TablesViewController *tablesViewController = [[TablesViewController alloc] init];
+    [[self navigationController] pushViewController:tablesViewController animated:YES]; 
 }
 @end

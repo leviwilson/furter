@@ -8,6 +8,7 @@ module Furter
       end
 
       def click
+
         wait_for_and_touch selector
       end
 

@@ -10,6 +10,7 @@ class DetailPage
   button(:button_text, :text => 'Some Button')
   button(:button_label, :label => 'labeledButtonId')
   button(:go_elsewhere, :text => 'Go Elsewhere')
+  button(:button_table, :text => 'Tables')
 
   switch(:switch_toggle, :label => 'switchToggle')
 

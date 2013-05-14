@@ -21,5 +21,9 @@ Furter::Navigation.routes = {
         [DetailPage, :switch_toggle],
         [DetailPage, :go_elsewhere],
         [ElsewherePage, :active?]
+    ],
+    :goto_tables => [
+        [DetailPage, :button_table],
+        [TablesPage]
     ]
 }
