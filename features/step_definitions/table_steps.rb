@@ -1,3 +1,3 @@
-When(/^I click in the "([^"]*)" index of the table identified by "([^"]*)"$/) do |index, label|
-  on(TablesPage).send("table_#{label}_touch_index", index)
+When(/^I click in the "([^"]*)" index of the table identified by "([^"]*)"$/) do |index, how|
+  on(TablesPage).send("table_#{how}=", index.to_i)
 end

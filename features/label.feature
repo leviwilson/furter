@@ -8,3 +8,4 @@ Feature: Working with label controls
 
   Scenario: Finding labels by their text
     Then the label identified by "text" should be "visible"
+
