@@ -50,7 +50,11 @@ module Furter
 
     def table(name, locator)
       define_method("#{name}=") do |which|
-        Furter::Accessors::TableItem.new(:text => which).click
+        if which.is_a? Integer
+          Furter::Accessors::Table.new(locator).touch_index which
+        else
+          Furter::Accessors::TableItem.new(:text => which).click
+        end
       end
       define_method("#{name}_options") do
         Furter::Accessors::Table.new(locator).options
