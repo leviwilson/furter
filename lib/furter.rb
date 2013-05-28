@@ -47,6 +47,11 @@ module Furter
       touch locator
     end
   end
+
+  def screenshot(scenario, path='screenshots')
+    Dir.mkdir(path) unless File.exists?(path)
+    frankly_screenshot("./#{path}/#{scenario.title}.jpg", nil, true)
+  end
 end
 
 
