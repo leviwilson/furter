@@ -48,9 +48,9 @@ module Furter
     end
   end
 
-  def screenshot(scenario, path='screenshots')
+  def screenshot(title, path='screenshots')
     Dir.mkdir(path) unless File.exists?(path)
-    frankly_screenshot("./#{path}/#{scenario.title}.jpg", nil, true)
+    frankly_screenshot("./#{path}/#{title}.jpg", nil, true)
   end
 end
 
