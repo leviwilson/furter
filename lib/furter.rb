@@ -11,6 +11,7 @@ require 'furter/accessors/table_item'
 require 'furter/accessors/text'
 require 'furter/accessors/label'
 require 'furter/accessors/slider'
+require 'furter/shottaker'
 
 module Furter
   include Frank::Cucumber::FrankHelper
@@ -49,8 +50,7 @@ module Furter
   end
 
   def self.screenshot(title, path='screenshots')
-    Dir.mkdir(path) unless File.exists?(path)
-    frankly_screenshot("./#{path}/#{title}.jpg", nil, true)
+    ShotTaker.screenshot(title, path)
   end
 end
 
