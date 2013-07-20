@@ -55,7 +55,7 @@ In your step definition, use the `Furter::Navigation#on` method when using your 
 When ^I login to my application$ do
   on(LoginScreen) do |screen|
     screen.username = 'user@example.com'
-    screen.password = '$3cr3t`
+    screen.password = '$3cr3t'
     screen.login
   end
 end
