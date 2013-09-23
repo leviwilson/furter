@@ -1,3 +1,6 @@
+=== Version 0.3.2 / 2013-09-23
+*	can select a table item by index
+
 === Version 0.3.1 / 2013-04-23
 * added a new slider accessor
 * added a views accessor to define which view controllers should be on a screen
