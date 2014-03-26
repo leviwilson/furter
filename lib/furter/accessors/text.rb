@@ -14,13 +14,13 @@ module Furter
       end
 
       def has_text?(text)
-        element_exists "view marked:'#{text}'"
+        element_exists "view marked:\"#{text}\""
       end
 
       private
       def selector
-        return "textField placeholder:'#{@locator[:placeholder]}'" if @locator[:placeholder]
-        return "textField marked:'#{@locator[:label]}'" if @locator[:label]
+        return "textField placeholder:\"#{@locator[:placeholder]}\"" if @locator[:placeholder]
+        return "textField marked:\"#{@locator[:label]}\"" if @locator[:label]
       end
     end
   end

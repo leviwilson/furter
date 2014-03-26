@@ -7,7 +7,7 @@ describe Furter::Accessors::Slider do
   context 'locating slider' do
     it 'can be found by id' do
       id_slider = Furter::Accessors::Slider.new(:label => 'someSliderLabel')
-      id_slider.send(:selector).should eq("view:'UISlider' marked:'someSliderLabel'")
+      id_slider.send(:selector).should eq("view:\"UISlider\" marked:\"someSliderLabel\"")
     end
   end
 

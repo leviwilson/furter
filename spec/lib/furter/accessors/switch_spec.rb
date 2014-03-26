@@ -5,7 +5,7 @@ describe Furter::Accessors::Switch do
 
   context 'locating switches' do
     it 'can be found by label' do
-      switch.send(:selector).should eq("view:'UISwitch' marked:'accessibilityLabel'")
+      switch.send(:selector).should eq("view:\"UISwitch\" marked:\"accessibilityLabel\"")
     end
   end
 

@@ -10,7 +10,7 @@ module Furter
 
       private
       def selector
-        "view:'UIAlertView' view:'UIAlertButton' marked:'#{@locator[:text]}'"
+        "view:\"UIAlertView\" view:\"UIAlertButton\" marked:\"#{@locator[:text]}\""
       end
     end
   end

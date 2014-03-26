@@ -5,7 +5,7 @@ module Furter
       def view_class
         case
           when @locator[:type]
-            "view:'#{@locator[:type]}'"
+            "view:\"#{@locator[:type]}\""
           when @locator[:text]
             "button label"
           else

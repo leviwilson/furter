@@ -21,7 +21,7 @@ module Furter
       end
 
       def next_responders
-        frankly_map("view:'UIView'", 'nextResponder').map do |r|
+        frankly_map("view:\"UIView\"", 'nextResponder').map do |r|
           r.gsub(/[<>]/,'')
         end
       end
@@ -34,9 +34,9 @@ module Furter
       def selector_how
         case
           when @locator[:label]
-            "marked:'#{@locator[:label]}'"
+            "marked:\"#{@locator[:label]}\""
           when @locator[:text]
-            "text:'#{@locator[:text]}'"
+            "text:\"#{@locator[:text]}\""
         end
       end
 
@@ -45,7 +45,7 @@ module Furter
       end
 
       def view_class
-        return "view:'#{@locator[:type]}'" if @locator[:type]
+        return "view:\"#{@locator[:type]}\"" if @locator[:type]
         "view"
       end
     end
