@@ -9,7 +9,7 @@ module Furter
       end
       private
       def selector
-        "view:'UITableView' marked:'#{@locator[:label]}'"
+        "view:\"UITableView\" marked:\"#{@locator[:label]}\""
       end
     end
   end

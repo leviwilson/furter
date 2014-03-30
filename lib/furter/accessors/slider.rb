@@ -11,8 +11,8 @@ module Furter
       end
 
       def view_class
-        return "view:'#{@locator[:type]}'" if @locator[:type]
-        "view:'UISlider'"
+        return "view:\"#{@locator[:type]}\"" if @locator[:type]
+        "view:\"UISlider\""
       end
     end
   end

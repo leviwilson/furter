@@ -6,11 +6,11 @@ describe Furter::Accessors::Text do
 
   context 'locating text fields' do
     it 'should work by placeholder' do
-      placeholder.send(:selector).should eq("textField placeholder:'Placeholder Text'")
+      placeholder.send(:selector).should eq("textField placeholder:\"Placeholder Text\"")
     end
 
     it 'should work by accessibility label' do
-      label.send(:selector).should eq("textField marked:'accessibilityLabel'")
+      label.send(:selector).should eq("textField marked:\"accessibilityLabel\"")
     end
   end
 
@@ -28,7 +28,7 @@ describe Furter::Accessors::Text do
   end
 
   it 'knows if text exists anywhere' do
-    placeholder.should_receive(:element_exists).with("view marked:'to find anywhere'")
+    placeholder.should_receive(:element_exists).with("view marked:\"to find anywhere\"")
     placeholder.has_text? 'to find anywhere'
   end
 

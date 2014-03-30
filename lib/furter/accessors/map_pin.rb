@@ -10,7 +10,7 @@ module Furter
 
       private
       def selector
-        "view:'MKPinAnnotationView' marked:'#{@locator[:text]}'"
+        "view:\"MKPinAnnotationView\" marked:\"#{@locator[:text]}\""
       end
     end
   end

@@ -3,7 +3,7 @@ module Furter
     class TableItem < Button
       private
       def selector
-        "label marked:'#{@locator[:text]}' parent tableViewCell"
+        "label marked:\"#{@locator[:text]}\" parent tableViewCell"
       end
     end
   end

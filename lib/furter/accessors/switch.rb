@@ -13,7 +13,7 @@ module Furter
 
       private
       def view_class
-        "view:'UISwitch'"
+        "view:\"UISwitch\""
       end
     end
   end
