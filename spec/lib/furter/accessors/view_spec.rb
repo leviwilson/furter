@@ -31,6 +31,12 @@ describe Furter::Accessors::View do
     view.click
   end
 
+  it 'can be tapped' do
+    expected_duration = 0.1
+    view.should_receive(:wait_for_and_tap).with(selector, expected_duration)
+    view.tap_and_hold_for(expected_duration)
+  end
+
   it 'knows if it is visible' do
     view.should_receive(:element_is_not_hidden).with(selector).and_return(true)
     view.should be_visible

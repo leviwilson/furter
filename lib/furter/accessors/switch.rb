@@ -8,7 +8,7 @@ module Furter
       end
 
       def set(on_or_off)
-        click if on_or_off != on?
+        tap_and_hold_for 0.1 if on_or_off != on?
       end
 
       private
