@@ -8,8 +8,11 @@ module Furter
       end
 
       def click
-
         wait_for_and_touch selector
+      end
+
+      def tap_and_hold_for(duration)
+        wait_for_and_tap(selector, duration)
       end
 
       def visible?

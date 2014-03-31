@@ -47,6 +47,12 @@ module Furter
       touch locator
     end
   end
+
+  def wait_for_and_tap(locator, duration)
+    wait_for(locator) do |locator|
+      tap_and_hold locator, duration
+    end
+  end
 end
 
 
