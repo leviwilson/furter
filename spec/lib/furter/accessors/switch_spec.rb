@@ -16,13 +16,13 @@ describe Furter::Accessors::Switch do
 
   it 'can turn it off or on' do
     switch.should_receive(:on?).and_return(true, false)
-    switch.should_receive(:click).twice
+    switch.should_receive(:tap_and_hold_for).twice
     [false, true].each { |on_or_off| switch.set on_or_off }
   end
 
   it 'will only toggle if in the expected state' do
     switch.should_receive(:frankly_map).with(anything, 'isOn').and_return([false])
-    switch.should_not_receive(:click)
+    switch.should_not_receive(:tap_and_hold_for)
     switch.set false
   end
 end
