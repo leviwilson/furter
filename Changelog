@@ -1,3 +1,7 @@
+===	Version 0.3.3 / 2014-05-17
+*	fixes issue with apostrophes in the selectors
+*	fix for issue with UISwitch and iOS 7
+
 === Version 0.3.2 / 2013-09-23
 *	can select a table item by index
 
